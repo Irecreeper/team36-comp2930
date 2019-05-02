@@ -1,22 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+        <title>Vancouver Eco News</title>
+        <style>
+            html, body {
+                height: 100%;
+            }
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+            h1 {
+                font-size: 64pt;
+            }
+
+            h2 {
+                font-size: 32pt;
+            }
+
+            h3 {
+                font-size: 24pt;
+            }
+
+            body {
+                color: white;
+                text-shadow: 1px 1px 4px #000000;
+                background-color: #6C9661;
+            }
+
+            #main_display {
+                background-image: url(images/blurryforest.jpg);
+                background-color: #999999;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+          
+            #nav_options {
+                text-align: center;
+                padding-top: 20px;
+                margin-top: 50px;
+                background-color: #6C9661;
+                border: 1px solid black;
+                border-radius: 10px;
+            }
+          
+          </style>
+        </head>
+    <body class="text-center">
+          <div id="main_display" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+              <header class="masthead mb-auto">
+                  <!-- this area left blank -->
+              </header>
+              <main role="main" class="cover">
+                    <img id="logo" src="https://dummyimage.com/400x300/000000/ffffff&text=Vancouver+Eco+News"/>
+                    <h1>Vancouver Eco News</h1>
+                    <h2>Your local news aggregate for all things green</h2>
+                    <div id="nav_options" class="container is-narrow">
+                    <div class="row">
+                        <div class="col-md-4 align-middle">
+                            <h3>View Articles</h3>
+                        </div>
+                        <div class="col-md-4 align-middle">
+                            <p><b>Interested in enviromental and ecological news? Come view some amazing articles.</b></p>
+                        </div>
+                        <div class="col-md-4 align-middle">
+                            <button id="view_button" type="button" class="btn btn-primary">View Articles</button>
+                        </div>
+                    </div>
+                    </div>
+              </main>
+              <footer class="mastfoot mt-auto">
+                  <button type="button" class="btn btn-secondary">About Us</button>
+                  <p>Copyright some random dudes in a room</p>
+              </footer>
+          </div>
+        
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
