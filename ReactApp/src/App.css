@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+
+html,
+body {
+  height: 100%;
+}
+h1 {
+  font-size: 64pt;
+}
+h2 {
+  font-size: 32pt;
+}
+h3 {
+  font-size: 24pt;
+}
+body {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  background-color: #6c9661;
+}
+#main_display {
+  background-image: url(blurryforest.jpg);
+  background-color: #999999;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav_options {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 50px;
+  background-color: #6c9661;
+  border: 1px solid black;
+  border-radius: 10px;
+}
