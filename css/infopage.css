@@ -1,0 +1,41 @@
+p {
+    font-size: 16pt;
+}
+
+.font-el {
+    font-family: 'El Messiri', sans-serif;
+}
+
+.font-ro {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-option {
+    margin-bottom: 2px;
+    width: 125px;
+}
+
+#holder {
+    background-color: #6C9661;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+#main-content {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mobile-nav-button {
+    background-color: #6C9661;
+    background-image: url(../images/hamburger_button.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+}
