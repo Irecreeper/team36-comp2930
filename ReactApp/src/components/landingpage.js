@@ -2,7 +2,7 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import ViewArt from './viewArt.js'
+import View_art_but from './view_art_but.js'
 
 class LandingPage extends React.Component {
   render() {
@@ -35,7 +35,7 @@ class LandingPage extends React.Component {
                   </div>
                   <div class="col-md-4">
                     <section>
-                      <ViewArt />
+                      <View_art_but />
                     </section>
                   </div>
                 </div>

@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Main from './main.js'
 
-class viewArt extends Component {
+class View_art_but extends Component {
   constructor(props) {
     super(props)
 
-    this.goHome = this.goHome.bind(this)
+    this.go = this.go.bind(this)
   }
 
-  goHome() {
+  go() {
     this.props.history.push('/main')
   }
 
@@ -20,7 +20,7 @@ class viewArt extends Component {
           id="view_button"
           type="button"
           class="btn btn-primary font_ro"
-          onClick={this.goHome}
+          onClick={this.go}
         >
           View articles
         </button>
@@ -29,4 +29,4 @@ class viewArt extends Component {
   }
 }
 
-export default withRouter(viewArt)
+export default withRouter(View_art_but)
