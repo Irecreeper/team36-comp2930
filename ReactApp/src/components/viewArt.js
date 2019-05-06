@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
+import Main from './main.js'
 
-class ViewArt extends React.Component {
-  showAlert() {
-    alert('Hello')
+class viewArt extends Component {
+  constructor(props) {
+    super(props)
+
+    this.goHome = this.goHome.bind(this)
+  }
+
+  goHome() {
+    this.props.history.push('/main')
   }
 
   render() {
-    return <button onClick={this.showAlert}>show alert</button>
+    return (
+      <div className="foo">
+        <button
+          id="view_button"
+          type="button"
+          class="btn btn-primary font_ro"
+          onClick={this.goHome}
+        >
+          View articles
+        </button>
+      </div>
+    )
   }
 }
 
-export default ViewArt
+export default withRouter(viewArt)
