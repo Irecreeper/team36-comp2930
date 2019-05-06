@@ -2,7 +2,7 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Alert from 'react-bootstrap/Alert'
+import ViewArt from './viewArt.js'
 
 class LandingPage extends React.Component {
   render() {
@@ -34,13 +34,9 @@ class LandingPage extends React.Component {
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <button
-                      id="view_button"
-                      type="button"
-                      class="btn btn-primary font_ro"
-                    >
-                      View Articles
-                    </button>
+                    <section>
+                      <ViewArt />
+                    </section>
                   </div>
                 </div>
               </div>
