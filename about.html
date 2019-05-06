@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/about.css">
-        <link href="https://fonts.googleapis.com/css?family=El+Messiri|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="css/about.css"/>
+        <link href="https://fonts.googleapis.com/css?family=El+Messiri|Roboto" rel="stylesheet"/>
         
         <title>Vancouver Eco News</title>
     </head>
@@ -20,28 +20,28 @@
                     <div class="navbar-collapse collapse nav-content order-2">
                         <div class="row mx-auto">
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success" type="button">Nav Option</button>
+                                <button class="btn btn-outline-success nav-option" type="button">Nav Option</button>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success" type="button">Nav Option</button>
+                                <button class="btn btn-outline-success nav-option" type="button">Nav Option</button>
                             </div>
                         </div>
                     </div>
                     <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
                         <a class="navbar-brand" href="#">
-                            <img src="https://dummyimage.com/80x60/000/fff&text=VEN" alt="">
+                            <img src="https://dummyimage.com/80x60/000/fff&text=VEN" alt=""/>
                         </a>
-                        <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                        <button id="mobile-nav-button" class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                     <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
                         <div class="row mx-auto">
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success" type="button">Nav Option</button>
+                                <button class="btn btn-outline-success nav-option" type="button">Nav Option</button>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success" type="button">Nav Option</button>
+                                <button class="btn btn-outline-success nav-option" type="button">Nav Option</button>
                             </div>
                         </div>
                     </div>
@@ -51,38 +51,85 @@
             <!-- Page Content -->
             <div id="about-us" class="container">
                 <h1 class="font-el">Who is VEN?</h1>
-                <p>We're a bunch of nerds, who specialize in makin' memes and designin' themes.</p>
+                <p>
+                    VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news aggregator that collects articles
+                    on the environment from our various trusted sources, and places them all in one webpage for easy, 
+                    comfy viewing! You may also anonymously chat about these articles with other Vancouverites using VEN’s 
+                    built in commenting functionality!
+                </p>
 
-                <h2 class="font-el">Our Mission</h2>
-                <p>We wish to conquer the earth or something.</p>
+                <p>
+                    This website was built using HTML5, CSS3, JavaScript, Bootstrap and ReactJS on the front-end, while 
+                    MongoDB and NodeJS were used for the back-end. Our website is hosted on Amazon Web Services. It was 
+                    also specifically designed for BCIT’s second-term Projects Course, which was sponsored by the folks at 
+                    EcoCity.
+                </p>
 
-                <h2 class="font-el">The People of VEN</h2>
+                <h1 class="font-el">Our Mission</h1>
+                <p>
+                    Vancouver Eco News was created so that Vancouverites (and others around the world) could easily keep up 
+                    with all of the eco-based news that our city has to offer. Normally, if one is concerned with 
+                    environmental topics, it can be a pain to jump from website to website to find out that is happening with 
+                    our environment.
+                </p>
+
+                <p>
+                    We hope to alleviate those problems with VEN- your local news aggregate for all things green! With all 
+                    of these articles condensed onto one website, it’ll be far easier to see the bigger picture of our 
+                    environment, and how we fit into EcoCity’s standards for a truly green city.
+                </p>
+
+                <a href="images/ecostandards.jpg">
+                    <img src="images/ecostandards.jpg" class="mx-auto d-block" width=90% height=90%/>
+                </a>
+
+                <p>
+                    Only with proper knowledge can we truly make Vancouver a true EcoCity. Be sure to check VEN daily to see 
+                    Vancouver’s current status, and perhaps learn what you can do to help our environment- every little bit 
+                    helps!
+                </p>
+
+                <h1 class="font-el">The People of VEN</h1>
                 <p>Here is the team of nerds that worked on VEN.</p>
                 <div class="row">
                     <div class="col-md-4 person-id">
-                        <h3 class="font-el">Manuel Andaya</h3>
-                        <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" height=200px width=200px alt="Mugshot of Person"/>
+                        <h2 class="font-el text-center">Manuel</h2>
+                        <img src="images/manuel_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
+                        <p>
+                            Manuel is a taekwondo enthusiast and instructor, who now practices web development at BCIT. He 
+                            has a passion for gaming and anime, and also enjoys combat sports and exercise.
+                        </p>
+                    </div>
+                    <div class="col-md-4 person-id">
+                        <h2 class="font-el text-center">Joel</h2>
+                        <img src="images/joel_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
+                        <p>
+                            Joel is a hard worker who did labour jobs for three years before coming to BCIT so that he could 
+                            join the growing industry of programmers. He’s a fan of gaming, especially platformer games.
+                        </p>
+                    </div>
+                    <div class="col-md-4 person-id">
+                        <h2 class="font-el text-center">Paolo</h2>
+                        <img src="images/paolo_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
+                        <p>
+                            Paolo is fresh out of highschool, and he aspires to become a fully-fledged game developer, and is 
+                            fascinated by the games industry and all of its happenings. For now though, he is more than happy 
+                            to study at BCIT.
+                        </p>
+                    </div>
+                    <div class="col-md-4 person-id">
+                        <h2 class="font-el text-center">Alec</h2>
+                        <img src="images/alec_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
                         <p>Person is a...</p>
                     </div>
                     <div class="col-md-4 person-id">
-                        <h3 class="font-el">Joel Colussi</h3>
-                        <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                    </div>
-                    <div class="col-md-4 person-id">
-                        <h3 class="font-el">Paolo Del Rio</h3>
-                        <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                    </div>
-                    <div class="col-md-4 person-id">
-                        <h3 class="font-el">Alec Martin</h3>
-                        <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                    </div>
-                    <div class="col-md-4 person-id">
-                        <h3 class="font-el">Zachary Oyama</h3>
-                        <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
+                        <h2 class="font-el text-center">Zachary</h2>
+                        <img src="images/zach_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
+                        <p>
+                            Zachary is the owner of Vancouver Eco News. He’s quite active, playing plenty of sports- 
+                            specifically, basketball and soccer. In his spare time, he also enjoys playing tabletop games 
+                            with his friends.
+                        </p>
                     </div>    
                 </div> 
             </div>

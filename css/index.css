@@ -36,7 +36,7 @@ body {
 }
 
 #main-display {
-    background-image: url(images/forestbackground.jpg);
+    background-image: url(backgrounds/forestbackground.jpg);
     background-color: #999999;
     background-position: center;
     background-repeat: no-repeat;
