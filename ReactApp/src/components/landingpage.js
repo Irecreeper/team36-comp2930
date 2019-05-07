@@ -7,6 +7,7 @@ import About_us_but_lp from './about_us_but_lp.js'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 class LandingPage extends React.Component {
   constructor(props) {

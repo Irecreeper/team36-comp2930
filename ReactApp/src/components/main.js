@@ -9,6 +9,8 @@ import { CSSTransition } from 'react-transition-group'
 
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
+import Card from './card.js'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
 
@@ -38,11 +40,9 @@ class Main extends React.Component {
   };
 
   render() {
-    const test = this.state
     return (
       <div id="holder">
         <NavBar />
-        <hr />
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
@@ -50,6 +50,7 @@ class Main extends React.Component {
           loader={<h4>Loading...</h4>}
         >
           {this.state.items.map((i, index) => (
+      
             <div key={index}>
               div - #{index}
               <div class="container">
