@@ -15,29 +15,28 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import NavBar from './navbar'
 
 import { render } from 'react-dom'
-import InfiniteScroll from 'react-infinite-scroll-component'
 
 const style = {
   height: 30,
-  border: "1px solid green",
+  border: '1px solid green',
   margin: 6,
-  padding: 8
-};
+  padding: 8,
+}
 
 class Main extends React.Component {
   state = {
-    items: Array.from({ length: 2 })
-  };
+    items: Array.from({ length: 2 }),
+  }
 
   fetchMoreData = () => {
     // a fake async api call like which sends
     // 20 more records in 1.5 secs
     setTimeout(() => {
       this.setState({
-        items: this.state.items.concat(Array.from({ length: 2 }))
-      });
-    }, 1500);
-  };
+        items: this.state.items.concat(Array.from({ length: 2 })),
+      })
+    })
+  }
 
   render() {
     return (
@@ -50,135 +49,17 @@ class Main extends React.Component {
           loader={<h4>Loading...</h4>}
         >
           {this.state.items.map((i, index) => (
-      
             <div key={index}>
-              div - #{index}
               <div class="container">
-          <div id="news-card-area" class="row">
-            <div id="news-item" class="col-md-6 col-lg-4">
-              <div class="card news-item">
-                <a href="#">
-                  <img
-                    class="card-img-top"
-                    src="https://dummyimage.com/600x400/000/fff"
-                    alt="Card image"
-                  />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-                  <p class="card-text">
-                    All of your friends and family have been drowned in a big
-                    ol' oil spillage!
-                  </p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
+                <div id="news-card-area" class="row">
+                  <Card />
+                  <Card />
+                  <Card />
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card news-item">
-                <a href="#">
-                  <img
-                    class="card-img-top"
-                    src="https://dummyimage.com/600x400/000/fff"
-                    alt="Card image"
-                  />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-                  <p class="card-text">
-                    All of your friends and family have been drowned in a big
-                    ol' oil spillage!
-                  </p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card news-item">
-                <a href="#">
-                  <img
-                    class="card-img-top"
-                    src="https://dummyimage.com/600x400/000/fff"
-                    alt="Card image"
-                  />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-                  <p class="card-text">
-                    All of your friends and family have been drowned in a big
-                    ol' oil spillage!
-                  </p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-              
             </div>
           ))}
         </InfiniteScroll>
-      
-
-      {/*
-        <div class="container">
-          <div id="news-card-area" class="row">
-            <div id="news-item" class="col-md-6 col-lg-4">
-              <div class="card news-item">
-                <a href="#">
-                  <img
-                    class="card-img-top"
-                    src="https://dummyimage.com/600x400/000/fff"
-                    alt="Card image"
-                  />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-                  <p class="card-text">
-                    All of your friends and family have been drowned in a big
-                    ol' oil spillage!
-                  </p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card news-item">
-                <a href="#">
-                  <img
-                    class="card-img-top"
-                    src="https://dummyimage.com/600x400/000/fff"
-                    alt="Card image"
-                  />
-                </a>
-
-                <div class="card-body">
-                  <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-                  <p class="card-text">
-                    All of your friends and family have been drowned in a big
-                    ol' oil spillage!
-                  </p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        */}
       </div>
     )
   }
