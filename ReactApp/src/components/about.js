@@ -12,6 +12,7 @@ import Joel from './images/joel_mug.png'
 import Manuel from './images/manuel_mug.png'
 import Paolo from './images/paolo_mug.png'
 import Standards from './images/ecostandards.jpg'
+import Konami from './konami.js'
 
 class About extends React.Component {
   constructor(props) {
