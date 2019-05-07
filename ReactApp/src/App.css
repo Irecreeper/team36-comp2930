@@ -25,11 +25,12 @@ body {
 
 .font_el {
     font-family: 'El Messiri', sans-serif;
-      color: black;
+      color: white;
 }
 
 .font_ro {
     font-family: 'Roboto', sans-serif;
+      color: white;
 }
 
 .text_on_background_lg {
