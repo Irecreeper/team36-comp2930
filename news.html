@@ -50,8 +50,8 @@
 
             <!-- Page Content -->
             <div class="container">
-                <div class="row">
-                    <div id="news-card-area" class="col-md-6 col-lg-4">
+                <div id="news-card-area" class="row">
+                    <div id="news-item" class="col-md-6 col-lg-4">
                         <div class="card news-item">
                                 <a href="#"> <!-- Clicking on the image will take you to the article address. -->
                                     <img class="card-img-top" src="https://dummyimage.com/600x400/000/fff" alt="Card image">
@@ -64,6 +64,19 @@
                                 </div>
                         </div>
                     </div>
+                    <div class="col-md-6 col-lg-4">
+                            <div class="card news-item">
+                                    <a href="#"> <!-- Clicking on the image will take you to the article address. -->
+                                        <img class="card-img-top" src="https://dummyimage.com/600x400/000/fff" alt="Card image">
+                                    </a>
+                                    
+                                    <div class="card-body">
+                                        <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
+                                        <p class="card-text">All of your friends and family have been drowned in a big ol' oil spillage!</p>
+                                        <a href="#" class="btn btn-primary">View Comments</a> <!-- Clicking on this will take you to the comments page. -->
+                                    </div>
+                            </div>
+                        </div>
                 </div>
             </div>
                 
@@ -72,12 +85,21 @@
         <!-- Scrolling down the page will add more cards to the page. -->
         <script>
         const newsArea = document.getElementById("news-card-area");
+        const articleTest = document.getElementById("news-item");
         
         window.addEventListener('scroll', function() {
             /* console.log(window.innerHeight + " / " + window.scrollY + " / " + document.body.offsetHeight);*/
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 console.log("Bottom reached! Adding article...");
-                newsArea.style.height = document.body.offsetHeight + 200 + "px";
+                /* newsArea.style.height = document.body.offsetHeight + 200 + "px"; */
+                let clone1 = articleTest.cloneNode(true);
+                newsArea.appendChild(clone1);
+
+                let clone2 = articleTest.cloneNode(true);
+                newsArea.appendChild(clone2);
+
+                let clone3 = articleTest.cloneNode(true);
+                newsArea.appendChild(clone3);
             }
         });
         </script>
