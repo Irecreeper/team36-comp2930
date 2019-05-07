@@ -1,152 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="css/infopage.css"/>
-        <link rel="stylesheet" href="css/about.css"/>
-        <link href="https://fonts.googleapis.com/css?family=El+Messiri|Roboto" rel="stylesheet"/>
-        
-        <title>Vancouver Eco News</title>
-    </head>
-    <body>
-        <div id="holder">
-            <!-- Navbar Functionality -->
-            <nav class="navbar navbar-expand-md fixed-top" style="background-color: #30572D">
-                <div class="container">
-                    <div class="navbar-collapse collapse nav-content order-2">
-                        <div class="row mx-auto">
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Environment</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Politics</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ven_logo.png" width=90px height=55px alt=""/>
-                        </a>
-                        <button id="mobile-nav-button" class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
-                        <div class="row mx-auto">
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">About</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Contact</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-            <!-- Page Content -->
-            <div id="main-content" class="container">
-                <h1 class="font-el">What is VEN?</h1>
-                <p>
-                    VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news aggregator that collects articles
-                    on the environment from our various trusted sources, and places them all in one webpage for easy, 
-                    comfy viewing! You may also anonymously chat about these articles with other Vancouverites using VEN’s 
-                    built in commenting functionality!
-                </p>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/infopage.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=El+Messiri|Roboto"
+      rel="stylesheet"
+    />
 
-                <p>
-                    This website was built using HTML5, CSS3, JavaScript, Bootstrap and ReactJS on the front-end, while 
-                    MongoDB and NodeJS were used for the back-end. Our website is hosted on Amazon Web Services. It was 
-                    also specifically designed for BCIT’s second-term Projects Course, which was sponsored by the folks at 
-                    EcoCity.
-                </p>
-
-                <h1 class="font-el">Our Mission</h1>
-                <p>
-                    Vancouver Eco News was created so that Vancouverites (and others around the world) could easily keep up 
-                    with all of the eco-based news that our city has to offer. Normally, if one is concerned with 
-                    environmental topics, it can be a pain to jump from website to website to find out that is happening with 
-                    our environment.
-                </p>
-
-                <p>
-                    We hope to alleviate those problems with VEN- your local news aggregate for all things green! With all 
-                    of these articles condensed onto one website, it’ll be far easier to see the bigger picture of our 
-                    environment, and how we fit into EcoCity’s standards for a truly green city.
-                </p>
-
-                <a href="images/ecostandards.jpg">
-                    <img src="images/ecostandards.jpg" class="mx-auto d-block" width=90% height=90%/>
-                </a>
-
-                <p>
-                    Only with proper knowledge can we truly make Vancouver a true EcoCity. Be sure to check VEN daily to see 
-                    Vancouver’s current status, and perhaps learn what you can do to help our environment- every little bit 
-                    helps!
-                </p>
-
-                <h1 class="font-el">The People of VEN</h1>
-                <p>Here is the team of nerds that worked on VEN.</p>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="font-el text-center">Manuel</h2>
-                        <img src="images/manuel_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>
-                            Manuel is a taekwondo enthusiast and instructor, who now practices web development at BCIT. He 
-                            has a passion for gaming and anime, and also enjoys combat sports and exercise.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="font-el text-center">Joel</h2>
-                        <img src="images/joel_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>
-                            Joel is a hard worker who did labour jobs for three years before coming to BCIT so that he could 
-                            join the growing industry of programmers. He’s a fan of gaming, especially platformer games.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="font-el text-center">Paolo</h2>
-                        <img src="images/paolo_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>
-                            Paolo is fresh out of highschool, and he aspires to become a fully-fledged game developer, and is 
-                            fascinated by the games industry and all of its happenings. For now though, he is more than happy 
-                            to study at BCIT.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="font-el text-center">Alec</h2>
-                        <img src="images/alec_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>
-                            Alec is an approachable person that loves to learn and work. He strives to learn new things every 
-                            day, and become the best that he can be. In his spare time, he loves to hang out with friends or 
-                            play video games like DotA.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2 class="font-el text-center">Zachary</h2>
-                        <img src="images/zach_mug.png" class="person-mug mx-auto d-block" height=200px width=200px alt="Mugshot of Person"/>
-                        <p>
-                            Zachary is the product owner of Vancouver Eco News. He’s quite active, playing plenty of sports- 
-                            specifically, basketball and soccer. In his spare time, he also enjoys playing tabletop games 
-                            with his friends.
-                        </p>
-                    </div>    
-                </div> 
+    <title>Vancouver Eco News</title>
+  </head>
+  <body>
+    <div id="holder">
+      <!-- Navbar Functionality -->
+      <nav
+        class="navbar navbar-expand-md fixed-top"
+        style="background-color: #30572D"
+      >
+        <div class="container">
+          <div class="navbar-collapse collapse nav-content order-2">
+            <div class="row mx-auto">
+              <div class="col-md-6">
+                <button
+                  class="btn btn-outline-success nav-option"
+                  type="button"
+                >
+                  Environment
+                </button>
+              </div>
+              <div class="col-md-6">
+                <button
+                  class="btn btn-outline-success nav-option"
+                  type="button"
+                >
+                  Politics
+                </button>
+              </div>
             </div>
+          </div>
+          <div
+            class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2"
+          >
+            <a class="navbar-brand" href="#">
+              <img
+                src="images/ven_logo.png"
+                width="90px"
+                height="55px"
+                alt=""
+              />
+            </a>
+            <button
+              id="mobile-nav-button"
+              class="navbar-toggler ml-2"
+              type="button"
+              data-toggle="collapse"
+              data-target=".nav-content"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div
+            class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3"
+          >
+            <div class="row mx-auto">
+              <div class="col-md-6">
+                <button
+                  class="btn btn-outline-success nav-option"
+                  type="button"
+                >
+                  About
+                </button>
+              </div>
+              <div class="col-md-6">
+                <button
+                  class="btn btn-outline-success nav-option"
+                  type="button"
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </nav>
 
-        <!-- Easter egg! Konami code to get "VEN VEN VEN VEN VEN" -->
-        <script src="js/konami.js"></script>
+      <!-- Page Content -->
+      <div id="main-content" class="container">
+        <h1 class="font-el">Who is VEN?</h1>
+        <p>
+          VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
+          aggregator that collects articles on the environment from our various
+          trusted sources, and places them all in one webpage for easy, comfy
+          viewing! You may also anonymously chat about these articles with other
+          Vancouverites using VEN’s built in commenting functionality!
+        </p>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+        <p>
+          This website was built using HTML5, CSS3, JavaScript, Bootstrap and
+          ReactJS on the front-end, while MongoDB and NodeJS were used for the
+          back-end. Our website is hosted on Amazon Web Services. It was also
+          specifically designed for BCIT’s second-term Projects Course, which
+          was sponsored by the folks at EcoCity.
+        </p>
+
+        <h1 class="font-el">Our Mission</h1>
+        <p>
+          Vancouver Eco News was created so that Vancouverites (and others
+          around the world) could easily keep up with all of the eco-based news
+          that our city has to offer. Normally, if one is concerned with
+          environmental topics, it can be a pain to jump from website to website
+          to find out that is happening with our environment.
+        </p>
+
+        <p>
+          We hope to alleviate those problems with VEN- your local news
+          aggregate for all things green! With all of these articles condensed
+          onto one website, it’ll be far easier to see the bigger picture of our
+          environment, and how we fit into EcoCity’s standards for a truly green
+          city.
+        </p>
+
+        <a href="images/ecostandards.jpg">
+          <img
+            src="images/ecostandards.jpg"
+            class="mx-auto d-block"
+            width="90%"
+            height="90%"
+          />
+        </a>
+
+        <p>
+          Only with proper knowledge can we truly make Vancouver a true EcoCity.
+          Be sure to check VEN daily to see Vancouver’s current status, and
+          perhaps learn what you can do to help our environment- every little
+          bit helps!
+        </p>
+
+        <h1 class="font-el">The People of VEN</h1>
+        <p>Here is the team of nerds that worked on VEN.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="font-el text-center">Manuel</h2>
+            <img
+              src="images/manuel_mug.png"
+              class="person-mug mx-auto d-block"
+              height="200px"
+              width="200px"
+              alt="Mugshot of Person"
+            />
+            <p>
+              Manuel is a taekwondo enthusiast and instructor, who now practices
+              web development at BCIT. He has a passion for gaming and anime,
+              and also enjoys combat sports and exercise.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2 class="font-el text-center">Joel</h2>
+            <img
+              src="images/joel_mug.png"
+              class="person-mug mx-auto d-block"
+              height="200px"
+              width="200px"
+              alt="Mugshot of Person"
+            />
+            <p>
+              Joel is a hard worker who did labour jobs for three years before
+              coming to BCIT so that he could join the growing industry of
+              programmers. He’s a fan of gaming, especially platformer games.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2 class="font-el text-center">Paolo</h2>
+            <img
+              src="images/paolo_mug.png"
+              class="person-mug mx-auto d-block"
+              height="200px"
+              width="200px"
+              alt="Mugshot of Person"
+            />
+            <p>
+              Paolo is fresh out of highschool, and he aspires to become a
+              fully-fledged game developer, and is fascinated by the games
+              industry and all of its happenings. For now though, he is more
+              than happy to study at BCIT.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2 class="font-el text-center">Alec</h2>
+            <img
+              src="images/alec_mug.png"
+              class="person-mug mx-auto d-block"
+              height="200px"
+              width="200px"
+              alt="Mugshot of Person"
+            />
+            <p>
+              Alec is an approachable person that loves to learn and work. He
+              strives to learn new things every day, and become the best that he
+              can be. In his spare time, he loves to hang out with friends or
+              play video games like DotA.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2 class="font-el text-center">Zachary</h2>
+            <img
+              src="images/zach_mug.png"
+              class="person-mug mx-auto d-block"
+              height="200px"
+              width="200px"
+              alt="Mugshot of Person"
+            />
+            <p>
+              Zachary is the product owner of Vancouver Eco News. He’s quite
+              active, playing plenty of sports- specifically, basketball and
+              soccer. In his spare time, he also enjoys playing tabletop games
+              with his friends.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Easter egg! Konami code to get "VEN VEN VEN VEN VEN" -->
+    <script src="js/konami.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
