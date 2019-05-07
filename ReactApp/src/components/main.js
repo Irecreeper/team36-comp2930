@@ -10,28 +10,45 @@ import { CSSTransition } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
 import Card from './card.js'
-import Infinte from './infiniteTest.js'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
 
 class Main extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      test: true,
-    }
+  }
+  state = {
+    items: Array.from({ length: 20 }),
+  }
+  fetchMoreData = () => {
+    // a fake async api call like which sends
+    // 20 more records in 1.5 secs
+    setTimeout(() => {
+      this.setState({
+        items: this.state.items.concat(Array.from({ length: 20 })),
+      })
+    }, 1500)
   }
   render() {
-    const test = this.state
     return (
       <div id="holder">
         <NavBar />
-
-        <div class="container">
-          <section>
-            <Card />
-          </section>
-        </div>
+        <InfiniteScroll
+          dataLength={this.state.items.length}
+          next={this.fetchMoreData}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+        >
+          {this.state.items.map((i, index) => (
+            <div key={index}>div - #{index}</div>
+          ))}
+          <div class="container">
+            <section>
+              <Card />
+            </section>
+          </div>
+        </InfiniteScroll>
       </div>
     )
   }
