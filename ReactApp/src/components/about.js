@@ -12,7 +12,11 @@ import Joel from './images/joel_mug.png'
 import Manuel from './images/manuel_mug.png'
 import Paolo from './images/paolo_mug.png'
 import Standards from './images/ecostandards.jpg'
+
 import Konami from './konami.js'
+
+import NavBar from './navbar.js'
+
 
 class About extends React.Component {
   constructor(props) {
@@ -25,68 +29,11 @@ class About extends React.Component {
     const test = this.state
     return (
       <div id="holder">
-        <nav class="navbar navbar-expand-md fixed-top">
-          <div class="container">
-            <div class="navbar-collapse collapse nav-content order-2">
-              <div class="row mx-auto">
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Environment
-                  </button>
-                </div>
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Politics
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
-              <a class="navbar-brand" href="#">
-                <Image src={Logo} className="Logo_Image" fluid rounded />
-              </a>
-              <button
-                id="mobile-nav-button"
-                class="navbar-toggler ml-2"
-                type="button"
-                data-toggle="collapse"
-                data-target=".nav-content"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon" />
-              </button>
-            </div>
-            <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
-              <div class="row mx-auto">
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    About
-                  </button>
-                </div>
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Contact
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-
+      
+        <NavBar />
+      
         <div id="main-content" class="container">
+        
           <h1 class="font-el">What is VEN?</h1>
           <p>
             VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
