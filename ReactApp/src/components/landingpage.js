@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import View_art_but from './view_art_but.js'
-import About_us_but from './about_us_but.js'
+import About_us_but_lp from './about_us_but_lp.js'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
@@ -56,7 +56,7 @@ class LandingPage extends React.Component {
           </main>
           <footer class="mastfoot mt-auto">
             <section>
-              <About_us_but />
+              <About_us_but_lp />
             </section>
             <p class="text_on_background_sm font_ro">
               Copyright some random dudes in a room

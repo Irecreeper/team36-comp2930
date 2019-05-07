@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-class About_us_but extends Component {
+class Contact_but extends Component {
   constructor(props) {
     super(props)
 
@@ -9,7 +9,7 @@ class About_us_but extends Component {
   }
 
   go() {
-    this.props.history.push('/about')
+    this.props.history.push('/contact')
   }
 
   render() {
@@ -21,11 +21,11 @@ class About_us_but extends Component {
           class="btn btn-outline-success nav-option"
           onClick={this.go}
         >
-          About Us
+          Contact
         </button>
       </div>
     )
   }
 }
 
-export default withRouter(About_us_but)
+export default withRouter(Contact_but)
