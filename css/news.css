@@ -1,9 +1,3 @@
-/* Shared formatting between about.html, and contact.html. */
-
-p {
-    font-size: 16pt;
-}
-
 .font-el {
     font-family: 'El Messiri', sans-serif;
 }
@@ -21,14 +15,7 @@ p {
     background-color: #6C9661;
     padding-top: 150px;
     padding-bottom: 50px;
-}
-
-#main-content {
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 6px 6px 18px black;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    min-height: 1200px;
 }
 
 #mobile-nav-button {
