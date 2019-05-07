@@ -33,7 +33,7 @@ class Main extends React.Component {
           </nav>
           <hr />
           <Switch>
-            <Route path='/' component={Hello} />
+            <Route exact path='/' component={Hello} />
             <Route path='/about' component={About} />
           </Switch>
         </div>
