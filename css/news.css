@@ -6,16 +6,19 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-option {
-    margin-bottom: 2px;
-    width: 125px;
-}
-
 #holder {
     background-color: #6C9661;
     padding-top: 150px;
     padding-bottom: 50px;
-    min-height: 1200px;
+    min-height: 1000px;
+}
+
+
+/* For navbar. */
+
+.nav-option {
+    margin-bottom: 2px;
+    width: 125px;
 }
 
 #mobile-nav-button {
@@ -27,4 +30,9 @@
     border-radius: 5px;
     height: 50px;
     margin-top: 10px;
+}
+
+/* Page-specific. */
+.news-item {
+    margin-bottom: 20px;
 }
