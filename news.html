@@ -165,9 +165,12 @@
             ' / ' +
             window.scrollY +
             ' / ' +
-            newsArea.clientHeight,
+            document.body.clientHeight,
         )
-        if (window.innerHeight + window.scrollY >= newsArea.clientHeight) {
+        if (
+          window.innerHeight + window.scrollY >=
+          document.body.clientHeight - 1
+        ) {
           console.log('Bottom reached! Adding article...')
           /* newsArea.style.height = document.body.offsetHeight + 200 + "px"; */
           let clone1 = articleTest.cloneNode(true)
