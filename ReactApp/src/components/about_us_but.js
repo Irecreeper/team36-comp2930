@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import Main from './main.js'
+import About from './about.js'
 
-class View_art_but extends Component {
+class About_us_but extends Component {
   constructor(props) {
     super(props)
 
@@ -29,4 +29,4 @@ class View_art_but extends Component {
   }
 }
 
-export default withRouter(View_art_but)
+export default withRouter(About_us_but)

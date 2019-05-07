@@ -19,12 +19,13 @@ h3 {
 }
 
 body {
-    color: white;
+    color: black;
     background-color: #6C9661;
 }
 
 .font_el {
     font-family: 'El Messiri', sans-serif;
+      color: black;
 }
 
 .font_ro {
@@ -66,4 +67,69 @@ body {
 .fade-appear.fade-appear-active {
   opacity: 1;
   transition: opacity 1000ms linear;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 5000ms linear;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+
+.navbar {
+  background-color: #30572D;
+}
+.person-mug {
+    border-radius: 200px;
+}
+
+
+p {
+    font-size: 16pt;
+
+}
+
+.nav-option {
+    margin-bottom: 2px;
+    width: 125px;
+}
+
+#holder {
+    background-color: #6C9661;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+#main-content {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mobile-nav-button {
+    background-color: #6C9661;
+    background-image: url(/hamburger_button.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.Logo_Image{
+  width:90px;
+  height:55px;
+}
+
+.Mug_Image{
+  border-radius: 200px;
+  height:200px;
+  width:200px;
 }
