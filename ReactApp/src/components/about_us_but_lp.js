@@ -18,7 +18,7 @@ class About_us_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-outline-success nav-option"
+          class="btn btn-secondary font_ro"
           onClick={this.go}
         >
           About Us
