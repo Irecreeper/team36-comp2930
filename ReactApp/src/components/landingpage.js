@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row'
 import View_art_but from './view_art_but.js'
 import About_us_but from './about_us_but.js'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import Image from 'react-bootstrap/Image'
+import Logo from './images/ven_logo.png'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -22,9 +24,12 @@ class LandingPage extends React.Component {
           class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
         >
           <main role="main" class="cover">
-            <img
-              id="logo"
-              src="https://dummyimage.com/400x300/000000/ffffff&text=Vancouver+Eco+News"
+            <Image
+              src={Logo}
+              className="person-mug mx-auto d-block"
+              alt="Eco Standards"
+              fluid
+              rounded
             />
             <h1 class="text_on_background_lg font_el">Vancouver Eco News</h1>
             <h2 class="text_on_background_lg font_el">
