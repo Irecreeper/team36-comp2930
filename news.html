@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="css/news.css"/>
+        <link href="https://fonts.googleapis.com/css?family=El+Messiri|Roboto" rel="stylesheet"/>
+        
+        <title>Vancouver Eco News</title>
+    </head>
+    <body>
+        <div id="holder">
+            <!-- Navbar Functionality -->
+            <nav class="navbar navbar-expand-md fixed-top" style="background-color: #30572D">
+                <div class="container">
+                    <div class="navbar-collapse collapse nav-content order-2">
+                        <div class="row mx-auto">
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success nav-option" type="button">Environment</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success nav-option" type="button">Politics</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ven_logo.png" width=90px height=55px alt=""/>
+                        </a>
+                        <button id="mobile-nav-button" class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
+                        <div class="row mx-auto">
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success nav-option" type="button">About</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success nav-option" type="button">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row">
+                    <div id="news-card-area" class="col-md-6 col-lg-4">
+                        <div class="card news-item">
+                                <a href="#"> <!-- Clicking on the image will take you to the article address. -->
+                                    <img class="card-img-top" src="https://dummyimage.com/600x400/000/fff" alt="Card image">
+                                </a>
+                                
+                                <div class="card-body">
+                                    <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
+                                    <p class="card-text">All of your friends and family have been drowned in a big ol' oil spillage!</p>
+                                    <a href="#" class="btn btn-primary">View Comments</a> <!-- Clicking on this will take you to the comments page. -->
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+
+        <!-- Scrolling down the page will add more cards to the page. -->
+        <script>
+        const newsArea = document.getElementById("news-card-area");
+        
+        window.addEventListener('scroll', function() {
+            /* console.log(window.innerHeight + " / " + window.scrollY + " / " + document.body.offsetHeight);*/
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                console.log("Bottom reached! Adding article...");
+                newsArea.style.height = document.body.offsetHeight + 200 + "px";
+            }
+        });
+        </script>
+
+        <!-- Easter egg! Konami code to get "VEN VEN VEN VEN VEN" -->
+        <script src="js/konami.js"></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
