@@ -13,8 +13,7 @@ import Card from './card.js'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
-
-import { render } from 'react-dom'
+import SearchBar from './searchbar'
 
 const style = {
   height: 30,
@@ -29,24 +28,24 @@ class Main extends React.Component {
   }
 
   fetchMoreData = () => {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
     setTimeout(() => {
       this.setState({
-        items: this.state.items.concat(Array.from({ length: 2 })),
-      })
-    })
+        items: this.state.items.concat(Array.from({ length: 2 }))
+      });
+    }, 1000);
   }
 
   render() {
     return (
-      <div id="holder">
+      <div id="container">
+
         <NavBar />
+        <SearchBar />
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
           hasMore={true}
-          loader={<h4>Loading...</h4>}
+          loader={<h4>Loading more eco news...</h4>}
         >
           {this.state.items.map((i, index) => (
             <div key={index}>
@@ -60,6 +59,8 @@ class Main extends React.Component {
             </div>
           ))}
         </InfiniteScroll>
+
+
       </div>
     )
   }
