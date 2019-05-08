@@ -6,7 +6,7 @@ var articleID = 0;
 //Infinite scroll!
 window.addEventListener('scroll', function() {
     // console.log(window.innerHeight + " / " + Math.ceil(window.scrollY) + " / " + document.body.clientHeight);
-    if ((window.innerHeight + Math.ceil(window.scrollY)) >= document.body.clientHeight) {
+    if ((window.innerHeight + Math.ceil(window.scrollY)) >= document.body.clientHeight - 10) { //-10 is so that it loads a little earlier
         console.log("Bottom reached! Adding articles...")
         for(let i = 0; i < 3; i++) {
             articleID++;

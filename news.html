@@ -20,10 +20,10 @@
                     <div class="navbar-collapse collapse nav-content order-2">
                         <div class="row mx-auto">
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Environment</button>
+                                <button class="btn btn-success nav-option" type="button">Environment</button>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Politics</button>
+                                <button class="btn btn-success nav-option" type="button">Politics</button>
                             </div>
                         </div>
                     </div>
@@ -38,10 +38,10 @@
                     <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
                         <div class="row mx-auto">
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">About</button>
+                                <button class="btn btn-success nav-option" type="button">About</button>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-outline-success nav-option" type="button">Contact</button>
+                                <button class="btn btn-success nav-option" type="button">Contact</button>
                             </div>
                         </div>
                     </div>
@@ -50,6 +50,17 @@
 
             <!-- Page Content -->
             <div class="container">
+                <!-- searchbar -->
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search VEN, or type a keyword...">
+                        <div class="input-group-append">
+                            <button id="#search-button" class="btn btn-primary" type="button">Button</button>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- news article area -->
                 <div id="news-card-area" class="row">
                     <div id="news-item-0" class="col-md-6 col-lg-4">
                         <div class="card news-item">
@@ -66,7 +77,6 @@
                     </div>
                 </div>
             </div>
-                
         </div>
 
         <!-- Enable infinite scroll. -->
