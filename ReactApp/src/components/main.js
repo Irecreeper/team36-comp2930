@@ -30,15 +30,14 @@ class Main extends React.Component {
   fetchMoreData = () => {
     setTimeout(() => {
       this.setState({
-        items: this.state.items.concat(Array.from({ length: 2 }))
-      });
-    }, 1000);
+        items: this.state.items.concat(Array.from({ length: 2 })),
+      })
+    }, 1000)
   }
 
   render() {
     return (
       <div id="container">
-
         <NavBar />
         <SearchBar />
         <InfiniteScroll
@@ -59,8 +58,6 @@ class Main extends React.Component {
             </div>
           ))}
         </InfiniteScroll>
-
-
       </div>
     )
   }

@@ -128,3 +128,7 @@ body {
   height:200px;
   width:200px;
 }
+.news-item {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
