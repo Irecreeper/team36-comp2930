@@ -2,7 +2,6 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-<<<<<<< HEAD
 import View_art_but from './view_art_but.js'
 import { CSSTransition } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
@@ -13,7 +12,11 @@ import Joel from './images/joel_mug.png'
 import Manuel from './images/manuel_mug.png'
 import Paolo from './images/paolo_mug.png'
 import Standards from './images/ecostandards.jpg'
+
 import Konami from './konami.js'
+
+import NavBar from './navbar.js'
+
 
 class About extends React.Component {
   constructor(props) {
@@ -26,68 +29,11 @@ class About extends React.Component {
     const test = this.state
     return (
       <div id="holder">
-        <nav class="navbar navbar-expand-md fixed-top">
-          <div class="container">
-            <div class="navbar-collapse collapse nav-content order-2">
-              <div class="row mx-auto">
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Environment
-                  </button>
-                </div>
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Politics
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
-              <a class="navbar-brand" href="#">
-                <Image src={Logo} className="Logo_Image" fluid rounded />
-              </a>
-              <button
-                id="mobile-nav-button"
-                class="navbar-toggler ml-2"
-                type="button"
-                data-toggle="collapse"
-                data-target=".nav-content"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon" />
-              </button>
-            </div>
-            <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
-              <div class="row mx-auto">
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    About
-                  </button>
-                </div>
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-outline-success nav-option"
-                    type="button"
-                  >
-                    Contact
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-
+      
+        <NavBar />
+      
         <div id="main-content" class="container">
+        
           <h1 class="font-el">What is VEN?</h1>
           <p>
             VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
@@ -229,60 +175,3 @@ class About extends React.Component {
 }
 
 export default About
-=======
-import Alert from 'react-bootstrap/Alert'
-
-class LandingPage extends React.Component {
-  render() {
-    return (
-      <div className="root">
-
-        <div id="holder">
-
-            <div id="about-us" class="container">
-              <h1 class="font-el">Who is VEN?</h1>
-              <p>We're a bunch of nerds, who specialize in makin' memes and designin' themes.</p>
-
-              <h2 class="font-el">Our Mission</h2>
-              <p>We wish to conquer the earth or something.</p>
-
-              <h2 class="font-el">The People of VEN</h2>
-              <p>Here is the team of nerds that worked on VEN.</p>
-              <div class="row">
-                <div class="col-md-4 person-id">
-                  <h3 class="font-el">Manuel Andaya</h3>
-                  <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" />
-                        <p>Person is a...</p>
-                </div>
-                <div class="col-md-4 person-id">
-                  <h3 class="font-el">Joel Colussi</h3>
-                  <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                </div>
-                <div class="col-md-4 person-id">
-                  <h3 class="font-el">Paolo Del Rio</h3>
-                  <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                </div>
-                <div class="col-md-4 person-id">
-                  <h3 class="font-el">Alec Martin</h3>
-                  <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                </div>
-                <div class="col-md-4 person-id">
-                  <h3 class="font-el">Zachary Oyama</h3>
-                  <img src="https://dummyimage.com/200x200/000/fff&text=Person" class="person-mug" alt="Mugshot of Person"/>
-                        <p>Person is a...</p>
-                </div>
-              </div>
-            </div>
-        </div>
-
-
-        </div>
-        )
-      }
-    }
-    
-    export default LandingPage
->>>>>>> 9307d10449edc451eb492830efc15c0b80b753e0

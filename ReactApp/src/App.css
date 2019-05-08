@@ -25,11 +25,12 @@ body {
 
 .font_el {
     font-family: 'El Messiri', sans-serif;
-      color: black;
+      color: white;
 }
 
 .font_ro {
     font-family: 'Roboto', sans-serif;
+      color: white;
 }
 
 .text_on_background_lg {
@@ -87,12 +88,6 @@ body {
     border-radius: 200px;
 }
 
-
-p {
-    font-size: 16pt;
-
-}
-
 .nav-option {
     margin-bottom: 2px;
     width: 125px;
@@ -100,7 +95,7 @@ p {
 
 #holder {
     background-color: #6C9661;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
