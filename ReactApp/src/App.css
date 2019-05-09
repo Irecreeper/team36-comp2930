@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Roboto');
 
 h1 {
     font-size: 64pt;
@@ -17,25 +18,33 @@ body {
     background-color: #6C9661;
 }
 
-.font_el {
+.font-el {
     font-family: 'El Messiri', sans-serif;
-      color: white;
 }
 
-.font_ro {
+.font-ro {
     font-family: 'Roboto', sans-serif;
-      color: white;
 }
 
-.text_on_background_lg {
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+.text-on-background-lg {
+    -webkit-text-stroke: 1px #000000;
 }
 
-.text_on_background_sm {
+.text-on-background-sm {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#main_display {
+#landing-header {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-bottom: 10%;
+}
+
+#landing-footer {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-top: 12.67%;
+}
+
+#main-display {
     background-image: url(forestbackground.jpg);
     background-color: #999999;
     background-position: center;
@@ -43,7 +52,7 @@ body {
     background-size: cover;
   }
 
-#nav_options {
+#nav-options {
     text-align: center;
     padding-top: 20px;
     margin-top: 50px;
@@ -121,6 +130,8 @@ body {
   border-radius: 200px;
   height:200px;
   width:200px;
+  display: block;
+  margin: 0 auto;
 }
 .news-item {
     margin-bottom: 10px;
