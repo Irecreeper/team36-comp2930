@@ -32,6 +32,7 @@ class LandingPage extends React.Component {
               src={Logo}
               className="person-mug mx-auto d-block"
               alt="Eco Standards"
+              id="logo"
               fluid
               rounded
             />

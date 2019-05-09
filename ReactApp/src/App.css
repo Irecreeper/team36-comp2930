@@ -97,7 +97,6 @@ body {
 }
 
 #holder {
-    background-color: #6C9661;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -122,8 +121,11 @@ body {
 }
 
 .Logo_Image{
-  width:90px;
-  height:55px;
+  width:120px
+}
+
+#logo{
+  width:522px;
 }
 
 .Mug_Image{
@@ -136,11 +138,6 @@ body {
 .news-item {
     margin-bottom: 10px;
     margin-top: 25px;
-}
-.sliding-background {
-  background: url("forestbackground.jpg") repeat-x;
-  height: 500px;
-  width: 100%;
 }
 *, *:before, *:after {
     box-sizing: border-box;

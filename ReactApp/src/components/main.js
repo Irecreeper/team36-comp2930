@@ -40,7 +40,6 @@ class Main extends React.Component {
       <div id="container">
         <div class="panel top">
           <NavBar />
-
           <SearchBar />
           <InfiniteScroll
             dataLength={this.state.items.length}

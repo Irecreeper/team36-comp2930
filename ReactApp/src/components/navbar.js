@@ -10,7 +10,8 @@ import Logo from './images/ven_logo.png'
 import About_us_but from './about_us_but.js'
 import Contact_but from './contact_but.js'
 
-class NavBar extends React.Component {constructor(props) {
+class NavBar extends React.Component {
+  constructor(props) {
     super(props)
     this.state = {
       test: true,
@@ -60,15 +61,13 @@ class NavBar extends React.Component {constructor(props) {
             </div>
             <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
               <div class="row mx-auto">
-              
                 <section class="col-md-6">
-                    <About_us_but />
+                  <About_us_but />
                 </section>
-                
+
                 <section class="col-md-6">
-                    <Contact_but />
+                  <Contact_but />
                 </section>
-                
               </div>
             </div>
           </div>
