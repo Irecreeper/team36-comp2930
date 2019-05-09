@@ -122,7 +122,7 @@ body {
   height:200px;
   width:200px;
 }
-
-.news_item {
-    margin-bottom: 20px;
+.news-item {
+    margin-bottom: 10px;
+    margin-top: 25px;
 }
