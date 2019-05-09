@@ -141,8 +141,10 @@ body {
     box-sizing: border-box;
 }
 @keyframes AnimationName {
-  0%{background-position:19% 0%}
-  100%{background-position:82% 100%}
+  0%{background-position:19% 0px}
+
+  50%{background-position:82% 500px}
+  100%{background-position:19% 0px}
 }
 .panel {
   padding: 3rem;
@@ -153,7 +155,7 @@ body {
   background-image: url(http://scarbroughstudios.com/img/codepen.svg);
   background-position: center center;
   background-size: 500px;
-  animation: AnimationName 30s linear infinite;
+  animation: AnimationName 60s ease infinite;
 }
 
 h1 {
