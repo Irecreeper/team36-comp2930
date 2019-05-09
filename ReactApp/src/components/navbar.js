@@ -26,7 +26,7 @@ class NavBar extends React.Component {constructor(props) {
               <div class="row mx-auto">
                 <div class="col-md-6">
                   <button
-                    class="btn btn-outline-success nav-option"
+                    class="btn btn-success nav-option"
                     type="button"
                   >
                     Environment
@@ -34,7 +34,7 @@ class NavBar extends React.Component {constructor(props) {
                 </div>
                 <div class="col-md-6">
                   <button
-                    class="btn btn-outline-success nav-option"
+                    class="btn btn-success nav-option"
                     type="button"
                   >
                     Politics

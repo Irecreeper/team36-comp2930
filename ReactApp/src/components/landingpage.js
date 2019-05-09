@@ -19,12 +19,15 @@ class LandingPage extends React.Component {
   render() {
     const test = this.state
     return (
-      <div class="text-center">
+      <div className="text-center text-white">
         <div
-          id="main_display"
-          class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
+          id="main-display"
+          className="d-flex w-100 h-100 p-3 mx-auto flex-column"
         >
-          <main role="main" class="cover">
+          <header id="landing-header">
+            {/* This area left blank intentionally. */}
+          </header>
+          <main role="main" className="cover">
             <Image
               src={Logo}
               className="person-mug mx-auto d-block"
@@ -32,22 +35,22 @@ class LandingPage extends React.Component {
               fluid
               rounded
             />
-            <h1 class="text_on_background_lg font_el">Vancouver Eco News</h1>
-            <h2 class="text_on_background_lg font_el">
+            <h1 class="text-on-background-lg font-el">Vancouver Eco News</h1>
+            <h2 class="text-on-background-lg font-el">
               Your local news aggregate for all things green
             </h2>
-            <div id="nav_options" class="container is-narrow">
-              <div class="row border-between">
-                <div class="col-md-4">
-                  <h3 class="font_ro">View Articles</h3>
+            <div id="nav-options" className="container is-narrow">
+              <div className="row border-between">
+                <div className="col-md-4">
+                  <h3 className="font-ro">View Articles</h3>
                 </div>
-                <div class="col-md-4">
-                  <p class="font_ro">
+                <div className="col-md-4">
+                  <p className="font-ro">
                     Interested in enviromental and ecological news? Come view
                     some amazing articles.
                   </p>
                 </div>
-                <div class="col-md-4">
+                <div className="col-md-4">
                   <section>
                     <View_art_but />
                   </section>
@@ -55,11 +58,11 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </main>
-          <footer class="mastfoot mt-auto">
+          <footer id="landing-footer">
             <section>
               <About_us_but_lp />
             </section>
-            <p class="text_on_background_sm font_ro">
+            <p className="text-on-background-sm font-ro">
               Copyright some random dudes in a room
             </p>
           </footer>
