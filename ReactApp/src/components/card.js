@@ -6,7 +6,7 @@ class Card extends React.Component {
     const test = this.state
     return (
       <div id="news-item" class="col-md-6 col-lg-4">
-        <Tilt className="Tilt" options={{ max: 15 }}>
+        <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
           <div class="card news-item">
             <a href="#">
               <img
