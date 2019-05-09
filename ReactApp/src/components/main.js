@@ -32,32 +32,35 @@ class Main extends React.Component {
       this.setState({
         items: this.state.items.concat(Array.from({ length: 2 })),
       })
-    }, 1000)
+    }, 500)
   }
 
   render() {
     return (
-      <div className="container">
-        <NavBar />
-        <SearchBar />
-        <InfiniteScroll
-          dataLength={this.state.items.length}
-          next={this.fetchMoreData}
-          hasMore={true}
-          loader={<h4>Loading more eco news...</h4>}
-        >
-          {this.state.items.map((i, index) => (
-            <div key={index}>
-              <div class="container">
-                <div id="news-card-area" class="row">
-                  <Card />
-                  <Card />
-                  <Card />
+      <div id="container">
+        <div class="panel top">
+          <NavBar />
+
+          <SearchBar />
+          <InfiniteScroll
+            dataLength={this.state.items.length}
+            next={this.fetchMoreData}
+            hasMore={true}
+            loader={<h4>Loading...</h4>}
+          >
+            {this.state.items.map((i, index) => (
+              <div key={index}>
+                <div class="container">
+                  <div id="news-card-area" class="row">
+                    <Card />
+                    <Card />
+                    <Card />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </InfiniteScroll>
+            ))}
+          </InfiniteScroll>
+        </div>
       </div>
     )
   }
