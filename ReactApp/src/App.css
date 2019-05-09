@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-
-
-html, body {
-    height: 100%;
-}
-
 h1 {
     font-size: 64pt;
 }
@@ -127,4 +121,8 @@ body {
   border-radius: 200px;
   height:200px;
   width:200px;
+}
+
+.news_item {
+    margin-bottom: 20px;
 }

@@ -18,7 +18,7 @@ class Contact_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-outline-success nav-option"
+          class="btn btn-success nav-option"
           onClick={this.go}
         >
           Contact
