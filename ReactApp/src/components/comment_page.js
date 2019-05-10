@@ -57,7 +57,7 @@ class CommentPage extends React.Component {
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="d-block mx-auto" src="images/example_captcha.png" width={400}px height={100}px />
+                                    <img class="d-block mx-auto" src="images/example_captcha.png" width="400px" height="100px" alt="captcha" />
                                 </div>
                             </div>
 
@@ -74,8 +74,6 @@ class CommentPage extends React.Component {
                                     <p>my cat is on fire aaaaaaa</p>
                                 </div>
                             </div>
-
-                        
                         </div>
                     </div>
                 </div>
@@ -83,3 +81,5 @@ class CommentPage extends React.Component {
         )
     }
 }
+
+export default CommentPage

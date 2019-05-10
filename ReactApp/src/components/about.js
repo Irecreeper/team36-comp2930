@@ -32,7 +32,7 @@ class About extends React.Component {
           <NavBar />
 
           <div id="main-content" class="container">
-            <h1 class="font-el">What is VEN?</h1>
+            <h1 class="font-el2">What is VEN?</h1>
             <p>
               VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based
               news aggregator that collects articles on the environment from our
@@ -50,7 +50,7 @@ class About extends React.Component {
               Course, which was sponsored by the folks at EcoCity.
             </p>
 
-            <h1 class="font-el">Our Mission</h1>
+            <h1 class="font-el2">Our Mission</h1>
             <p>
               Vancouver Eco News was created so that Vancouverites (and others
               around the world) could easily keep up with all of the eco-based
@@ -84,7 +84,7 @@ class About extends React.Component {
               every little bit helps!
             </p>
 
-            <h1 class="font-el">The People of VEN</h1>
+            <h1 class="font-el2">The People of VEN</h1>
             <p>Here is the team of nerds that worked on VEN.</p>
             <div class="row">
               <div class="col-md-4">

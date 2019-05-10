@@ -8,6 +8,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Resize from './landing_resize'
+
+import Konami from './konami.js'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -20,14 +23,8 @@ class LandingPage extends React.Component {
     const test = this.state
     return (
       <div className="text-center text-white">
-        <div
-          id="main-display"
-          className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
-        >
-          <header id="landing-header" class="mb-auto">
-            {/* This area left blank intentionally. */}
-          </header>
-          <main role="main" className="cover">
+        <div class="panel top">
+          <main id="test" role="main" className="cover">
             <Image
               src={Logo}
               className="person-mug mx-auto d-block"
@@ -58,15 +55,16 @@ class LandingPage extends React.Component {
                 </div>
               </div>
             </div>
+
+            <footer id="landing-footer">
+              <section>
+                <About_us_but_lp />
+              </section>
+              <p className="text-on-background-sm font-ro">
+                Copyright some random dudes in a room
+              </p>
+            </footer>
           </main>
-          <footer id="landing-footer" class="mt-auto">
-            <section>
-              <About_us_but_lp />
-            </section>
-            <p className="text-on-background-sm font-ro">
-              Copyright some random dudes in a room
-            </p>
-          </footer>
         </div>
       </div>
     )

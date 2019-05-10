@@ -16,11 +16,23 @@ h3 {
 body {
     color: black;
     background-color: #6C9661;
+    height: 100%;
 }
+html{
+   min-height: 100%;
+   box-sizing: border-box;
+   padding-bottom: 20px;
 
+}
 .font-el {
     font-family: 'El Messiri', sans-serif;
+}
+.font-el2 {
+    font-family: 'El Messiri', sans-serif;
     color: black;
+}
+.text-center{
+    height: 100%;    
 }
 
 .font-ro {
@@ -33,6 +45,16 @@ body {
 
 .text-on-background-sm {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#landing-header {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-bottom: 10%;
+}
+
+#landing-footer {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-top: 40px;
 }
 
 #main-display {
@@ -102,7 +124,7 @@ body {
 
 #mobile-nav-button {
     background-color: #6C9661;
-    background-image: url(/hamburger_button.png);
+    background-image: url(hamburger_button.png);
     background-size: 50px 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -116,7 +138,7 @@ body {
 }
 
 #logo{
-  width:522px;
+  width:350px;
 }
 
 .Mug_Image{
@@ -134,21 +156,22 @@ body {
     box-sizing: border-box;
 }
 @keyframes AnimationName {
-  0%{background-position:19% 0px}
+  0%{background-position:0px 0px}
 
-  50%{background-position:82% 500px}
-  100%{background-position:19% 0px}
+  100%{background-position:0px 320px}
+
 }
 .panel {
   padding: 3rem;
-  height: 50%;
+  height: 100%;
+
 }
 .top {
-  background-color: #3E69C3;
+  background-color: #6C9661;
   background-image: url(http://scarbroughstudios.com/img/codepen.svg);
   background-position: center center;
   background-size: 500px;
-  animation: AnimationName 60s ease infinite;
+  animation: AnimationName 10s linear infinite;
 }
 
 h1 {
