@@ -22,9 +22,9 @@ class LandingPage extends React.Component {
       <div className="text-center text-white">
         <div
           id="main-display"
-          className="d-flex w-100 h-100 p-3 mx-auto flex-column"
+          className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
         >
-          <header id="landing-header">
+          <header id="landing-header" class="mb-auto">
             {/* This area left blank intentionally. */}
           </header>
           <main role="main" className="cover">
@@ -58,7 +58,7 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </main>
-          <footer id="landing-footer">
+          <footer id="landing-footer" class="mt-auto">
             <section>
               <About_us_but_lp />
             </section>

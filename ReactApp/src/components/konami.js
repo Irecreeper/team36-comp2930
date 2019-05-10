@@ -1,3 +1,4 @@
+//If the user inputs the konami code, plays a sound byte.
 var key_seq = 0;
 
 document.onkeydown = checkKey;
