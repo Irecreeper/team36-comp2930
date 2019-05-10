@@ -20,13 +20,7 @@ class LandingPage extends React.Component {
     const test = this.state
     return (
       <div className="text-center text-white">
-        <div
-          id="main-display"
-          className="d-flex w-100 h-100 p-3 mx-auto flex-column"
-        >
-          <header id="landing-header">
-            {/* This area left blank intentionally. */}
-          </header>
+        <div class="panel top">
           <main role="main" className="cover">
             <Image
               src={Logo}
@@ -58,15 +52,16 @@ class LandingPage extends React.Component {
                 </div>
               </div>
             </div>
+
+            <footer id="landing-footer">
+              <section>
+                <About_us_but_lp />
+              </section>
+              <p className="text-on-background-sm font-ro">
+                Copyright some random dudes in a room
+              </p>
+            </footer>
           </main>
-          <footer id="landing-footer">
-            <section>
-              <About_us_but_lp />
-            </section>
-            <p className="text-on-background-sm font-ro">
-              Copyright some random dudes in a room
-            </p>
-          </footer>
         </div>
       </div>
     )
