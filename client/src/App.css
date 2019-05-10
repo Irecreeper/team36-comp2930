@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Roboto');
+
+h1 {
+    font-size: 64pt;
+}
+
+h2 {
+    font-size: 32pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+body {
+    color: black;
+    background-color: #6C9661;
+}
+.font-el {
+    font-family: 'El Messiri', sans-serif;
+}
+.font-el2 {
+    font-family: 'El Messiri', sans-serif;
+    color: black;
+}
+
+.font-ro {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-on-background-lg {
+    -webkit-text-stroke: 1px #000000;
+}
+
+.text-on-background-sm {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#landing-header {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-bottom: 10%;
+}
+
+#landing-footer {
+    /* yeah it's specific, but going to react seemed to kill the old method */
+    margin-top: 40px;
+}
+
+#main-display {
+    background-image: url(forestbackground.jpg);
+    background-color: #999999;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+#nav-options {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 50px;
+    background-color: #6C9661;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px black;
+}
+
+
+
+/* appear - on page load */
+.fade-appear {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 5000ms linear;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+
+.navbar {
+  background-color: #30572D;
+}
+.person-mug {
+    border-radius: 200px;
+}
+
+.nav-option {
+    margin-bottom: 2px;
+    width: 125px;
+}
+
+#holder {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#main-content {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mobile-nav-button {
+    background-color: #6C9661;
+    background-image: url(hamburger_button.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.Logo_Image{
+  width:120px
+}
+
+#logo{
+  width:350px;
+}
+
+.Mug_Image{
+  border-radius: 200px;
+  height:200px;
+  width:200px;
+  display: block;
+  margin: 0 auto;
+}
+.news-item {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+@keyframes AnimationName {
+  0%{background-position:0px 0px}
+
+  100%{background-position:0px 320px}
+
+}
+.panel {
+  padding: 3rem;
+  height: 100%;
+
+}
+.container2
+{
+    height: 100%;
+  }
+.top {
+  background-color: #6C9661;
+  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
+  background-position: center center;
+  background-size: 500px;
+  background-repeat: repeat;
+  animation: AnimationName 10s linear infinite;
+   height: 100%;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
