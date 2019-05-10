@@ -16,6 +16,13 @@ h3 {
 body {
     color: black;
     background-color: #6C9661;
+    height: 100%;
+}
+html{
+   min-height: 100%;
+   box-sizing: border-box;
+   padding-bottom: 20px;
+
 }
 .font-el {
     font-family: 'El Messiri', sans-serif;
@@ -23,6 +30,9 @@ body {
 .font-el2 {
     font-family: 'El Messiri', sans-serif;
     color: black;
+}
+.text-center{
+    height: 100%;    
 }
 
 .font-ro {
