@@ -44,8 +44,8 @@ function checkKey(e) {
         }
     } else if (e.keyCode == '13') { //enter / start
         if (key_seq === 10) {
-            //var audio = new Audio('js/ven_ven_ven.mp3');
-            //audio.play();
+            var audio = new Audio('js/ven_ven_ven.mp3');
+            audio.play();
             key_seq = 0;
             console.log("VEN");
         } 
