@@ -8,9 +8,10 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import Resize from './landing_resize'
 
 import Konami from './konami.js'
+
+/* import Resize from './landing_resize' */
 
 class LandingPage extends React.Component {
   constructor(props) {
