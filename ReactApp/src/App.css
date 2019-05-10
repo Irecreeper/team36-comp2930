@@ -20,6 +20,7 @@ body {
 
 .font-el {
     font-family: 'El Messiri', sans-serif;
+    color: black;
 }
 
 .font-ro {
@@ -87,7 +88,6 @@ body {
 }
 
 #holder {
-    background-color: #6C9661;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -112,8 +112,11 @@ body {
 }
 
 .Logo_Image{
-  width:90px;
-  height:55px;
+  width:120px
+}
+
+#logo{
+  width:522px;
 }
 
 .Mug_Image{
@@ -126,4 +129,33 @@ body {
 .news-item {
     margin-bottom: 10px;
     margin-top: 25px;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+@keyframes AnimationName {
+  0%{background-position:19% 0px}
+
+  50%{background-position:82% 500px}
+  100%{background-position:19% 0px}
+}
+.panel {
+  padding: 3rem;
+  height: 50%;
+}
+.top {
+  background-color: #3E69C3;
+  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
+  background-position: center center;
+  background-size: 500px;
+  animation: AnimationName 60s ease infinite;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
