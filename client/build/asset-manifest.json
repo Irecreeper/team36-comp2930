@@ -1,0 +1,21 @@
+{
+  "main.css": "/static/css/main.5ff4ae79.chunk.css",
+  "main.js": "/static/js/main.223151ee.chunk.js",
+  "main.js.map": "/static/js/main.223151ee.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.018f9164.chunk.js": "/static/js/2.018f9164.chunk.js",
+  "static/js/2.018f9164.chunk.js.map": "/static/js/2.018f9164.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.463ee3c34a300f6db0a70836a461bc4d.js": "/precache-manifest.463ee3c34a300f6db0a70836a461bc4d.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.5ff4ae79.chunk.css.map": "/static/css/main.5ff4ae79.chunk.css.map",
+  "static/media/alec_mug.png": "/static/media/alec_mug.95780eae.png",
+  "static/media/ecostandards.jpg": "/static/media/ecostandards.04bcefe5.jpg",
+  "static/media/App.css": "/static/media/forestbackground.f4f751a6.jpg",
+  "static/media/joel_mug.png": "/static/media/joel_mug.a70b9b43.png",
+  "static/media/manuel_mug.png": "/static/media/manuel_mug.cd8d61ce.png",
+  "static/media/paolo_mug.png": "/static/media/paolo_mug.ca5c2f5f.png",
+  "static/media/ven_logo.png": "/static/media/ven_logo.840e24bb.png",
+  "static/media/zach_mug.png": "/static/media/zach_mug.45cad6b7.png"
+}
