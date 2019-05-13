@@ -27,6 +27,7 @@ class LandingPage extends React.Component {
       <div className="text-center text-white">
         <div class="container2">
           <div class="panel top">
+          <h1>This worked</h1>
             <p>{this.state.apiResponse}</p>
             <main role="main" className="cover">
               <Image
