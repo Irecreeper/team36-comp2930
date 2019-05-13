@@ -10,7 +10,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div id={"news-" + this.nextUniqueId()} class="col-md-6 col-lg-4">
+      <div id={"articlecard-" + this.nextUniqueId()} class="col-md-6 col-lg-4">
         {/*
         <div>
           <input id={id} type="checkbox" />
@@ -21,14 +21,15 @@ class Card extends React.Component {
             <a href="#">
               <img
                 class="card-img-top"
+                id={"articleimage-" + this.lastUniqueId()}
                 src="https://dummyimage.com/600x400/000/fff"
                 alt="Card image"
               />
             </a>
 
             <div class="card-body">
-              <h5 class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-              <p class="card-text">
+              <h5 id={"articletitle-" + this.lastUniqueId()} class="card-title">EVERYONE DIES IN OIL SPILL</h5>
+              <p id={"articletext-" + this.lastUniqueId()} class="card-text">
                 All of your friends and family have been drowned in a big ol'
                 oil spillage!
               </p>
