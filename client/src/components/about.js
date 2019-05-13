@@ -27,9 +27,9 @@ class About extends React.Component {
   render() {
     const test = this.state
     return (
-      <div id="holder">
+      <div>
         <NavBar />
-
+        <div class="contain">
         <div id="main-content" class="container">
           <h1 class="font-el2">What is VEN?</h1>
           <p>
@@ -166,6 +166,7 @@ class About extends React.Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     )
   }

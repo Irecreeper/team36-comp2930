@@ -11,7 +11,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div id={"articlecard-" + this.nextUniqueId()} class="col-md-6 col-lg-4">
+      <div id={"articlecard-" + this.nextUniqueId()} class="col-lg-4">
         {/*
         <div>
           <input id={id} type="checkbox" />

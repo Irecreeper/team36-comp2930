@@ -2,6 +2,8 @@ import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 import View_art_but from './view_art_but.js'
 import { CSSTransition } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
@@ -21,7 +23,32 @@ class NavBar extends React.Component {
   render() {
     const test = this.state
     return (
-      <div id="holder">
+      
+      <Navbar expand="md">
+        <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
+          <Nav className="mx-auto">
+            <Environment_but/>
+            <Environment_but/>
+          </Nav>
+        </Navbar.Collapse>
+
+        <a className="navbar-brand order-1 order-md-2" href="/">
+          <Image src={Logo} className="Logo_Image" fluid rounded />
+        </a>
+
+        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
+          <Nav className="mx-auto">
+            <About_us_but/>
+            <Contact_but/>
+          </Nav>
+        </Navbar.Collapse>
+
+        <Navbar.Toggle id="mobile-nav-button" className="order-2" aria-controls="basic-navbar-nav" />
+      </Navbar>
+      
+      
+
+      /*
         <nav class="navbar navbar-expand-md fixed-top">
           <div class="container">
             <div class="navbar-collapse collapse nav-content order-2">
@@ -68,8 +95,9 @@ class NavBar extends React.Component {
             </div>
           </div>
         </nav>
-      </div>
-    )
+      
+    */
+   )  
   }
 }
 

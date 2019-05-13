@@ -113,7 +113,6 @@ html{
 }
 
 #holder {
-    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -127,13 +126,6 @@ html{
 
 #mobile-nav-button {
     background-color: #6C9661;
-    background-image: url(hamburger_button.png);
-    background-size: 50px 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    height: 50px;
-    margin-top: 10px;
 }
 
 .Logo_Image{
@@ -169,7 +161,7 @@ html{
   height: 100%;
 
 }
-.contain{
+.contain {
   padding-top: 50px;
 }
 
