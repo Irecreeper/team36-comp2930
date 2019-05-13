@@ -26,7 +26,6 @@ class Contact extends React.Component {
             For further viewing of VEN's project scope and design, check out our
             project pitch on <a href="https://urlzs.com/WQTA">YouTube</a>.
 
-            <div class="fb-comments" data-href="https://vancouvereconews.azurewebsites.net/" data-width="" data-numposts="5"></div>
           </div>
         </div>
       </div>
