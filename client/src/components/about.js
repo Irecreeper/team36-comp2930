@@ -86,7 +86,7 @@ class About extends React.Component {
           <h1 class="font-el2">The People of VEN</h1>
           <p>Here is the team of nerds that worked on VEN.</p>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Manuel</h2>
               <Image
                 src={Manuel}
@@ -101,7 +101,7 @@ class About extends React.Component {
                 and anime, and also enjoys combat sports and exercise.
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Joel</h2>
               <Image
                 src={Joel}
@@ -116,7 +116,7 @@ class About extends React.Component {
                 programmers. He’s a fan of gaming, especially platformer games.
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Paolo</h2>
               <Image
                 src={Paolo}
@@ -132,7 +132,7 @@ class About extends React.Component {
                 than happy to study at BCIT.
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Alec</h2>
               <Image
                 src={Alec}
@@ -148,7 +148,7 @@ class About extends React.Component {
                 or play video games like DotA.
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Zachary</h2>
               <Image
                 src={Zach}
