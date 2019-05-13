@@ -1,6 +1,7 @@
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id';
+import Comments_but from './comments_page_but'
 
 class Card extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class Card extends React.Component {
                 id={"articleimage-" + this.lastUniqueId()}
                 src="https://dummyimage.com/600x400/000/fff"
                 alt="Card image"
+                target="_blank"
               />
             </a>
 
@@ -33,9 +35,7 @@ class Card extends React.Component {
                 All of your friends and family have been drowned in a big ol'
                 oil spillage!
               </p>
-              <a href="#" class="btn btn-primary">
-                View Comments
-              </a>
+              <Comments_but />
             </div>
           </div>
         </Tilt>

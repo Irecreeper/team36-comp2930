@@ -23,10 +23,12 @@ class CommentPage extends React.Component {
         const test = this.state;
         return (
             <div id="holder">
+                <NavBar />
+
                 <div class="container"> {/* Page Content */}
                     <div class="card mb-3">
                         {/* Card Image */}
-                        <a href="#"> {/* Clicking on the image will take you to the article address. */}
+                        <a href="#" target="_blank"> {/* Clicking on the image will take you to the article address. */}
                             <img class="card-img-top" src="https://dummyimage.com/1300x200/000/fff" alt="Article" />
                         </a>
                         

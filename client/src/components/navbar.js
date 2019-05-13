@@ -9,6 +9,7 @@ import Logo from './images/ven_logo.png'
 
 import About_us_but from './about_us_but.js'
 import Contact_but from './contact_but.js'
+import Environment_but from './environment_but.js'
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -26,12 +27,7 @@ class NavBar extends React.Component {
             <div class="navbar-collapse collapse nav-content order-2">
               <div class="row mx-auto">
                 <div class="col-md-6">
-                  <button
-                    class="btn btn-success nav-option"
-                    type="button"
-                  >
-                    Environment
-                  </button>
+                  <Environment_but />
                 </div>
                 <div class="col-md-6">
                   <button

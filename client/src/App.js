@@ -5,6 +5,7 @@ import LandingPage from './components/landingpage.js'
 import Main from './components/main.js'
 import About from './components/about.js'
 import Contact from './components/contact.js'
+import Comments from './components/comment_page.js'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path="/main" component={Main} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/comments" component={Comments} />
           </Switch>
         </div>
       </BrowserRouter>
