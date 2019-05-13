@@ -11,10 +11,9 @@ class Contact extends React.Component {
   render() {
     const test = this.state
     return (
-      <div class="container2">
-        <div class="panel top">
-          <NavBar />
-
+      <div>
+        <NavBar />
+        <div class="contain">
           <div id="main-content" class="container">
             This page is currently in progress.
             <br />

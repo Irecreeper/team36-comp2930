@@ -12,16 +12,22 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 class LandingPage extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      test: true,
-    }
+    this.state = { apiResponse: '' }
+  }
+  callAPI() {
+    fetch('http://localhost:9000/testAPI')
+      .then(res => res.text())
+      .then(res => this.setState({ apiResponse: res }))
+  }
+  componentWillMount() {
+    this.callAPI()
   }
   render() {
-    const test = this.state
     return (
       <div className="text-center text-white">
         <div class="container2">
           <div class="panel top">
+            <p>{this.state.apiResponse}</p>
             <main role="main" className="cover">
               <Image
                 src={Logo}
