@@ -14,9 +14,12 @@ h3 {
 }
 
 body {
-    color: black;
-    background-color: #6C9661;
-    height: 100%;
+  background-color: #6C9661;
+  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
+  background-position: center center;
+  background-size: 500px;
+  background-repeat: repeat;
+  animation: AnimationName 10s linear infinite;
 }
 html{
    min-height: 100%;
@@ -166,10 +169,10 @@ html{
   height: 100%;
 
 }
-.container2
-{
-    height: 100%;
-  }
+.contain{
+  padding-top: 50px;
+}
+
 .top {
   background-color: #6C9661;
   background-image: url(http://scarbroughstudios.com/img/codepen.svg);
@@ -177,7 +180,6 @@ html{
   background-size: 500px;
   background-repeat: repeat;
   animation: AnimationName 10s linear infinite;
-   height: 100%;
 }
 
 h1 {

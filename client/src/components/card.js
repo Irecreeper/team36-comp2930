@@ -2,10 +2,19 @@ import React from 'react'
 import Tilt from 'react-tilt'
 
 class Card extends React.Component {
+  /*constructor(props) {
+    super(props)
+    this.id = _.uniqueId('prefix-')
+  }*/
   render() {
-    const test = this.state
+    const id = this.id
     return (
       <div id="news-item" class="col-md-6 col-lg-4">
+        {/*
+        <div>
+          <input id={id} type="checkbox" />
+          <label htmlFor={id}>label</label>
+        </div>*/}
         <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
           <div class="card news-item">
             <a href="#">
