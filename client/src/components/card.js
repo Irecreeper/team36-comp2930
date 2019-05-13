@@ -1,15 +1,16 @@
 import React from 'react'
 import Tilt from 'react-tilt'
+import uniqueID from 'react-html-id';
 
 class Card extends React.Component {
-  /*constructor(props) {
-    super(props)
-    this.id = _.uniqueId('prefix-')
-  }*/
+  constructor() {
+    super()
+    uniqueID.enableUniqueIds(this)
+}
+
   render() {
-    const id = this.id
     return (
-      <div id="news-item" class="col-md-6 col-lg-4">
+      <div id={"news-" + this.nextUniqueId()} class="col-md-6 col-lg-4">
         {/*
         <div>
           <input id={id} type="checkbox" />
