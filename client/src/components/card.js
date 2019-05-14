@@ -5,8 +5,8 @@ import Comments_but from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     uniqueID.enableUniqueIds(this)
     this.state = {
       articles: []
@@ -14,11 +14,11 @@ class Card extends React.Component {
 }
 
 componentWillMount() {
-  this.getArticles(this.props.default);
+  this.getArticles();
 }
 
 getArticles() {
-  axios.get('https://newsapi.org/v2/everything?q=vancouver%20AND%20environment&sortBy=popularity&apiKey=0b39a6dc7b46419fa77f079a370ebc91')
+  axios.get('https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91')
   .then(res => {
     const articles = res.data.articles;
     console.log(articles);
@@ -31,12 +31,14 @@ getArticles() {
 
   render() {
     return (
+      
       <div id={"articlecard-" + this.nextUniqueId()} class="col-lg-4">
         {/*
         <div>
           <input id={id} type="checkbox" />
           <label htmlFor={id}>label</label>
         </div>*/}
+        
         {this.state.articles.map((news) => {
           return (
             <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
@@ -61,9 +63,6 @@ getArticles() {
               </a>
             </div>
           </div>
-            )
-          })}
-          
         </Tilt>
           )
         })}
