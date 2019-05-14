@@ -55,6 +55,7 @@ class Card extends React.Component {
                 </div>
               </div>
             </Tilt>
+            </div>
           )
         })}
       </div>
