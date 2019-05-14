@@ -216,3 +216,12 @@ h1 {
 .col2{
   max-width: 33.33%;
 }
+
+.card-sm {
+  height: 550px;
+}
+
+.card-img-top-sm {
+  object-fit: cover;
+  height: 175px;
+}

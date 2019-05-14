@@ -39,12 +39,13 @@ class Card extends React.Component {
           return (
             <div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
             <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-              <div class="card news-item">
+              <div class="card card-sm news-item">
                 <a href={news.url}>
                   <img
-                    class="card-img-top"
+                    class="card-img-top card-img-top-sm"
                     src={news.urlToImage}
                     alt="Card image"
+                    target="_blank"
                   />
                 </a>
 
@@ -55,6 +56,7 @@ class Card extends React.Component {
                 </div>
               </div>
             </Tilt>
+            </div>
           )
         })}
       </div>
@@ -117,5 +119,6 @@ class Card extends React.Component {
     )
   }
 }
+
 
 export default Card
