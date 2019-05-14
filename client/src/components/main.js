@@ -49,7 +49,7 @@ class Main extends React.Component {
           {this.state.items.map((i, index) => (
             <div key={index}>
               <div class="container">
-                <div id="news-card-area" class="col">
+                <div id="news-card-area">
                   <Card />
                   <Card />
                   <Card />

@@ -37,12 +37,7 @@ class Card extends React.Component {
       <div>
         {this.state.articles.map(news => {
           return (
-            <div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
-              {/*
-        <div>
-          <input id={id} type="checkbox" />
-          <label htmlFor={id}>label</label>
-        </div>*/}
+            <div id={'articlecard-' + this.nextUniqueId()} class="col2">
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card news-item">
                   <a href={news.url}>
