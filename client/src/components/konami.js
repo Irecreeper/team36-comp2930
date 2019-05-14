@@ -58,7 +58,7 @@ function checkKey(e) {
             for (let i = 0; i < texts.length; i++) {
                 texts[i].innerHTML = "VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN";
             }
-
+            
             key_seq = 0;
             console.log("VEN");
         } 
