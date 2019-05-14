@@ -6,6 +6,7 @@ import Main from './components/main.js'
 import About from './components/about.js'
 import Contact from './components/contact.js'
 import Comments from './components/comment_page.js'
+import NotFound from './components/404.js'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/comments" component={Comments} />
+            <Route component={NotFound}></Route>
           </Switch>
         </div>
       </BrowserRouter>
