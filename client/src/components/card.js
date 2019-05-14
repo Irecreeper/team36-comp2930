@@ -87,7 +87,7 @@ class Card extends React.Component {
             </div>
           )
         })}
-      </div>
+      </div> */
     )
   }
 }
