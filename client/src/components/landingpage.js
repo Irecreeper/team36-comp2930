@@ -69,9 +69,6 @@ class LandingPage extends React.Component {
                   Copyright some random dudes in a room
                 </p>
                 
-                                <FacebookProvider appId="281178766160238">
-                                    <Comments />
-                                </FacebookProvider>
               </footer>
             </main>
           </div>
