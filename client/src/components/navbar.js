@@ -27,8 +27,8 @@ class NavBar extends React.Component {
       <Navbar expand="md">
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
           <Nav className="mx-auto">
-            <Environment_but/>
-            <Environment_but/>
+            <Environment_but className="nav_option" />
+            <Environment_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
 
@@ -38,8 +38,8 @@ class NavBar extends React.Component {
 
         <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
           <Nav className="mx-auto">
-            <About_us_but/>
-            <Contact_but/>
+            <About_us_but className="nav_option"/>
+            <Contact_but className="nav_option"/>
           </Nav>
         </Navbar.Collapse>
 
