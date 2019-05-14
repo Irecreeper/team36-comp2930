@@ -14,14 +14,11 @@ class Contact extends React.Component {
       <div>
         <NavBar />
         <div class="contain">
+          <h1 class="text-center text-white font-el">404 Baby</h1>
           <div id="main-content" class="container">
-            This page is currently in progress.
+            Looks like that page doesn't exist friendo!
             <br />
-            For information on the progress of our development, or if you are a
-            COMP2930 instructor looking to contact us, send an email to Team
-            36's communication liason:
-            <br />
-            Manuel Andaya: mandaya1@my.bcit.ca
+            Either that, or Manuel hasn't fixed the routing issue yet >:@
             <br /><br />
             For further viewing of VEN's project scope and design, check out our
             project pitch on <a href="https://urlzs.com/WQTA">YouTube</a>.

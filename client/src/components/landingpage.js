@@ -8,6 +8,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import { FacebookProvider, Comments } from 'react-facebook'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -73,6 +74,7 @@ class LandingPage extends React.Component {
                 <p className="text-on-background-sm font-ro">
                   Powered by News API
                 </p>
+                
               </footer>
             </main>
           </div>

@@ -32,7 +32,7 @@ h2 {
   h1 {
     font-size: 48pt;
   }
-  
+
   h2 {
     font-size: 36pt;
   }
@@ -46,7 +46,7 @@ h2 {
   h1 {
     font-size: 64pt;
   }
-  
+
   h2 {
     font-size: 40pt;
   }
@@ -80,7 +80,7 @@ html{
     color: black;
 }
 .text-center{
-    height: 100%;    
+    height: 100%;
 }
 
 .font-ro {
@@ -202,4 +202,17 @@ html{
 
 .about_person {
   height: 100%;
+}
+
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.col2{
+  max-width: 33.33%;
 }

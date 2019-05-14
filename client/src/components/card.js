@@ -34,7 +34,6 @@ class Card extends React.Component {
 
   render() {
     return (
-      
       <div className="row">
         {this.state.articles.map(news => {
           return (
@@ -56,12 +55,42 @@ class Card extends React.Component {
                 </div>
               </div>
             </Tilt>
-            </div>
           )
         })}
       </div>
 
-      /*<div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
+      /* found this during a merge conflict; take a look?
+      may be broken
+      <div>
+        {this.state.articles.map(news => {
+          return (
+            <div id={'articlecard-' + this.nextUniqueId()} class="col2">
+              <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
+                <div class="card news-item">
+                  <a href={news.url} target="_blank">
+                    <img
+                      class="card-img-top"
+                      src={news.urlToImage}
+                      alt="Card image"
+                    />
+                  </a>
+
+                  <div class="card-body">
+                    <h5 class="card-title">{news.title}</h5>
+
+                    <p class="card-text">{news.description}</p>
+                    <Comments_but />
+                  </div>
+                </div>
+              </Tilt>
+            </div>
+          )
+        })}
+       </div>
+      */
+
+      /* initial code
+      <div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
         {this.state.articles.map(news => {
           return (
             <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
