@@ -39,10 +39,10 @@ class LandingPage extends React.Component {
                 rounded
               />
               <h1 class="text-on-background-lg font-el">Vancouver Eco News</h1>
-              <h2 class="text-on-background-lg font-el">
+              <h2 class="text-on-background-lg font-el hide-sm">
                 Your local news aggregate for all things green
               </h2>
-              <div id="nav-options" className="container is-narrow">
+              <div id="landing-navigate" className="container is-narrow hide-sm">
                 <div className="row border-between">
                   <div className="col-md-4">
                     <h3 className="font-ro">View Articles</h3>
@@ -61,12 +61,18 @@ class LandingPage extends React.Component {
                 </div>
               </div>
 
+              <div className="show-sm"> {/* Only appears at small sizes. */}
+                <View_art_but />
+                <br/>
+                <About_us_but_lp />
+              </div>
+
               <footer id="landing-footer">
-                <section>
+                <section className="hide-sm">
                   <About_us_but_lp />
                 </section>
                 <p className="text-on-background-sm font-ro">
-                  Copyright some random dudes in a room
+                  Powered by News API
                 </p>
                 
               </footer>
