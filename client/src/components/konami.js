@@ -44,8 +44,21 @@ function checkKey(e) {
         }
     } else if (e.keyCode == '13') { //enter / start
         if (key_seq === 10) {
-            var audio = new Audio('js/ven_ven_ven.mp3');
-            audio.play();
+            /*var audio = new Audio('js/ven_ven_ven.mp3');
+            audio.play();*/
+
+            //Select all headings on the news page, and replace it with VEN!
+            let headings = document.getElementsByClassName("card-title");
+            for (let i = 0; i < headings.length; i++) {
+                headings[i].innerHTML = "VEN";
+            }
+
+            //Select all article text on the news page, and replace it with VEN!
+            let texts = document.getElementsByClassName("card-text");
+            for (let i = 0; i < texts.length; i++) {
+                texts[i].innerHTML = "VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN";
+            }
+
             key_seq = 0;
             console.log("VEN");
         } 
