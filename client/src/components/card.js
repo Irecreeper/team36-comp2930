@@ -56,9 +56,7 @@ class Card extends React.Component {
                   <h5 class="card-title">{news.title}</h5>
 
                   <p class="card-text">{news.description}</p>
-                  <a href="#" class="btn btn-primary">
-                    View Comments
-                  </a>
+                  <Comments_but />
                 </div>
               </div>
             </Tilt>
