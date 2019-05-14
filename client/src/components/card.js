@@ -2,11 +2,31 @@ import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id';
 import Comments_but from './comments_page_but'
+import axios from 'axios'
 
 class Card extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     uniqueID.enableUniqueIds(this)
+    this.state = {
+      articles: []
+    };
+}
+
+componentWillMount() {
+  this.getArticles(this.props.default);
+}
+
+getArticles() {
+  axios.get('https://newsapi.org/v2/everything?q=vancouver%20AND%20environment&sortBy=popularity&apiKey=0b39a6dc7b46419fa77f079a370ebc91')
+  .then(res => {
+    const articles = res.data.articles;
+    console.log(articles);
+    this.setState({ articles: articles });
+  })
+  .catch(error => {
+    console.log(error);
+  });
 }
 
   render() {
@@ -17,28 +37,37 @@ class Card extends React.Component {
           <input id={id} type="checkbox" />
           <label htmlFor={id}>label</label>
         </div>*/}
-        <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-          <div class="card news-item">
-            <a href="#">
+        {this.state.articles.map((news) => {
+          return (
+            <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
+            <div class="card news-item">
+            <a href={news.url}>
               <img
                 class="card-img-top"
-                id={"articleimage-" + this.lastUniqueId()}
-                src="https://dummyimage.com/600x400/000/fff"
+                src={news.urlToImage}
                 alt="Card image"
-                target="_blank"
               />
             </a>
 
             <div class="card-body">
-              <h5 id={"articletitle-" + this.lastUniqueId()} class="card-title">EVERYONE DIES IN OIL SPILL</h5>
-              <p id={"articletext-" + this.lastUniqueId()} class="card-text">
-                All of your friends and family have been drowned in a big ol'
-                oil spillage!
+            
+              <h5 class="card-title">{news.title}</h5>
+            
+              <p class="card-text">
+                {news.description}
               </p>
-              <Comments_but />
+              <a href="#" class="btn btn-primary">
+                View Comments
+              </a>
             </div>
           </div>
+            )
+          })}
+          
         </Tilt>
+          )
+        })}
+        
       </div>
     )
   }
