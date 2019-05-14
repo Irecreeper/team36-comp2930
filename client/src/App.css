@@ -38,7 +38,7 @@ h2 {
   }
 
   #landing-footer {
-    margin-top: 10%;
+    margin-top: 50px;
   }
 }
 
@@ -199,6 +199,8 @@ html{
 .contain {
   padding-top: 50px;
 }
+
+
 
 .about_person {
   height: 100%;
