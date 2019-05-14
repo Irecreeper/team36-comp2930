@@ -24,7 +24,7 @@ class NavBar extends React.Component {
     const test = this.state
     return (
       
-      <Navbar expand="md">
+      <Navbar expand="md" className="sticky-top">
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
           <Nav className="mx-auto">
             <Environment_but className="nav_option" />
