@@ -45,7 +45,7 @@ class Card extends React.Component {
         </div>*/}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card news-item">
-                  <a href={news.url}>
+                  <a href={news.url} target="_blank">
                     <img
                       class="card-img-top"
                       src={news.urlToImage}
