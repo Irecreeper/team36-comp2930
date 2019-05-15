@@ -66,10 +66,10 @@ getArticles() {
                 </a>
 
                 <div class="card-body">
-                  <h5 class="card-title trim-sm">{news.title}</h5>
-                  <p class="card-text trim-md">{news.description}</p>
+                  <h5 class="card-title trim">{news.title}</h5>
+                  <p class="card-text trim">{news.description}</p>
                   <div class="trim-sm">
-                    <Comments_but />
+                    <Comments_but id={this.lastUniqueId()}/>
                   </div>
                 </div>
               </div>
