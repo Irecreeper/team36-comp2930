@@ -19,6 +19,8 @@ class Contact extends React.Component {
             Looks like that page doesn't exist friendo!
             <br />
             Either that, or Manuel hasn't fixed the routing issue yet >:@
+            <br />
+            Please be patient with us.
             <br /><br />
             For further viewing of VEN's project scope and design, check out our
             project pitch on <a href="https://urlzs.com/WQTA">YouTube</a>.
