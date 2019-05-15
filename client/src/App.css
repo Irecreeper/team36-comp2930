@@ -163,9 +163,6 @@ html{
 #logo{
   width:350px;
 }
-#Opacity{
-  opacity: 0.95;
-}
 
 .Mug_Image{
   border-radius: 200px;
@@ -224,10 +221,17 @@ h1 {
 }
 
 .card-sm {
-  height: 550px;
+  height: 500px;
+  overflow: hidden;
 }
 
 .card-img-top-sm {
   object-fit: cover;
   height: 175px;
+}
+
+
+.trim {
+  overflow: hidden;
+  height: 100px;
 }

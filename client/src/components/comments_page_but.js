@@ -9,7 +9,12 @@ class About_us_but extends Component {
   }
 
   go() {
-    this.props.history.push('/comments')
+    this.props.history.push('/comments');
+    this.testID(this.id)
+  }
+  
+  testID(anID) {
+    alert(anID);
   }
 
   render() {
