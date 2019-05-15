@@ -163,6 +163,9 @@ html{
 #logo{
   width:350px;
 }
+#Opacity{
+  opacity: 0.95;
+}
 
 .Mug_Image{
   border-radius: 200px;
