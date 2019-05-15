@@ -13,9 +13,24 @@ class Card extends React.Component {
     }
   }
 
-componentWillMount() {
-  this.getArticles();
-}
+  componentWillMount() {
+    this.getArticles()
+  }
+
+  getArticles() {
+    axios
+      .get(
+        'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
+      )
+      .then(res => {
+        const articles = res.data.articles
+        console.log(articles)
+        this.setState({ articles: articles })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
 getArticles() {
   axios
