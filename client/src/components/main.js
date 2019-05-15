@@ -13,7 +13,6 @@ import Card from './card.js'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
-import SearchBar from './searchbar'
 
 const style = {
   height: 30,
@@ -39,7 +38,6 @@ class Main extends React.Component {
     return (
       <div id="container">
         <NavBar />
-        <SearchBar />
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}

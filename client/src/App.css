@@ -231,13 +231,3 @@ h1 {
   object-fit: cover;
   height: 175px;
 }
-
-.trim-sm {
-  overflow: hidden;
-  height: 21.75%;
-}
-
-.trim-md {
-  overflow: hidden;
-  height: 38%;
-}
