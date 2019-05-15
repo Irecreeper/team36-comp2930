@@ -20,7 +20,7 @@ componentWillMount() {
 getArticles() {
   axios
     .get(
-      'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91'
+      'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&pageSize=21&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91'
     )
   .then(res => {
     const articles = res.data.articles;
@@ -51,9 +51,11 @@ getArticles() {
                 </a>
 
                 <div class="card-body">
-                  <h5 class="card-title">{news.title}</h5>
-                  <p class="card-text">{news.description}</p>
-                  <Comments_but />
+                  <h5 class="card-title trim-sm">{news.title}</h5>
+                  <p class="card-text trim-md">{news.description}</p>
+                  <div class="trim-sm">
+                    <Comments_but />
+                  </div>
                 </div>
               </div>
             </Tilt>
@@ -61,38 +63,8 @@ getArticles() {
           )
         })}
       </div>
-
-      /* found this during a merge conflict; take a look?
-      may be broken
-      <div>
-        {this.state.articles.map(news => {
-          return (
-            <div id={'articlecard-' + this.nextUniqueId()} class="col2">
-            
-              <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-                <div class="card news-item">
-                  <a href={news.url}>
-                    <img
-                      class="card-img-top"
-                      src={news.urlToImage}
-                      alt="Card image"
-                    />
-                  </a>
-
-                  <div class="card-body">
-                    <h5 class="card-title">{news.title}</h5>
-                    <p class="card-text">{news.description}</p>
-                    <Comments_but />
-                  </div>
-                </div>
-              </Tilt>
-            </div>
-          )
-        })}
-      </div>
     )
   }
 }
-
 
 export default Card
