@@ -5,53 +5,42 @@ import Comments_but from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
-      articles: [],
-    }
-  }
+      articles: this.props.articles
+    };
+}
 
-  componentWillMount() {
-    this.getArticles();
-  }
+componentWillMount() {
+  //this.getArticles();
+}
 
-  getArticles() {
-    axios
-      .get(
-        'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
-      )
-      .then(res => {
-        const articles = res.data.articles
-        console.log(articles)
-        this.setState({ articles: articles })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
+/*
+getArticles() {
+  axios
+    .get(
+      'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&pageSize=21&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
+    )
+    .then(res => {
+      const articles = res.data.articles
+      console.log(articles)
+      this.setState({ articles: articles })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+}
+*/
 
-  getArticles() {
-    axios
-      .get(
-        'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&pageSize=21&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
-      )
-      .then(res => {
-        const articles = res.data.articles
-        console.log(articles)
-        this.setState({ articles: articles })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
 
   render() {
     return (
       <div className="row">
         {this.state.articles.map(news => {
           return (
+
             <div
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
@@ -61,7 +50,8 @@ class Card extends React.Component {
                   <a href={news.url} target="_blank">
                     <img
                       class="card-img-top card-img-top-sm"
-                      src={news.urlToImage}
+                      //src={news.urlToImage}
+                      src={news.image}
                       alt="Card image"
                     />
                   </a>
