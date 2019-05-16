@@ -1,7 +1,7 @@
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
-import CommentsBut from './comments_page_but'
+import Comments_but from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
