@@ -1,7 +1,7 @@
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
-import Comments_but from './comments_page_but'
+import CommentsBut from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
@@ -40,7 +40,6 @@ getArticles() {
       <div className="row">
         {this.state.articles.map(news => {
           return (
-
             <div
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"

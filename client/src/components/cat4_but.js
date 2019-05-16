@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Main from './main.js'
 
-class View_art_but extends Component {
+class Cat4_but extends Component {
   constructor(props) {
     super(props)
 
@@ -22,11 +22,11 @@ class View_art_but extends Component {
           className="btn btn-success nav-option"
           onClick={this.go}
         >
-          Environment
+          Category 4
         </button>
       </div>
     )
   }
 }
 
-export default withRouter(View_art_but)
+export default withRouter(Cat4_but)

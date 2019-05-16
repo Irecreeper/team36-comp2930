@@ -11,7 +11,10 @@ import Logo from './images/ven_logo.png'
 
 import About_us_but from './about_us_but.js'
 import Contact_but from './contact_but.js'
-import Environment_but from './environment_but.js'
+import Cat1_but from './cat1_but.js'
+import Cat2_but from './cat2_but.js'
+import Cat3_but from './cat3_but.js'
+import Cat4_but from './cat4_but.js'
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -26,8 +29,9 @@ class NavBar extends React.Component {
       <Navbar expand="md" className="sticky-top" id="Opacity">
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
           <Nav className="mx-auto">
-            <Environment_but className="nav_option" />
-            <Environment_but className="nav_option" />
+            <Cat1_but className="nav_option" />
+            <Cat2_but className="nav_option" />
+            <Cat3_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
 
@@ -37,8 +41,9 @@ class NavBar extends React.Component {
 
         <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
           <Nav className="mx-auto">
-            <About_us_but className="nav_option" />
-            <Contact_but className="nav_option" />
+            <Cat4_but className="nav_option" />
+            <About_us_but className="nav_option"/>
+            <Contact_but className="nav_option"/>
           </Nav>
         </Navbar.Collapse>
 
@@ -48,8 +53,10 @@ class NavBar extends React.Component {
           aria-controls="basic-navbar-nav"
         />
       </Navbar>
-
+      
       /*
+        old navbar code
+
         <nav class="navbar navbar-expand-md fixed-top">
           <div class="container">
             <div class="navbar-collapse collapse nav-content order-2">

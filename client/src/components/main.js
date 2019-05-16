@@ -84,7 +84,6 @@ class Main extends React.Component {
                 { this.state && this.state.articles && 
                   <Card articles={this.state.articles}/>
                 }
-      
                 </div>
               </div>
             </div>
