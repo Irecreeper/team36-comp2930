@@ -26,8 +26,8 @@ class LandingPage extends React.Component {
   render() {
     return (
       <div className="text-center text-white">
-        <div class="container2">
-          <div class="panel top">
+        <div className="container2">
+          <div className="panel top">
             <p>{this.state.apiResponse}</p>
             <main role="main" className="cover">
               <Image
@@ -38,8 +38,8 @@ class LandingPage extends React.Component {
                 fluid
                 rounded
               />
-              <h1 class="text-on-background-lg font-el">Vancouver Eco News</h1>
-              <h2 class="text-on-background-lg font-el hide-sm">
+              <h1 className="text-on-background-lg font-el">Vancouver Eco News</h1>
+              <h2 className="text-on-background-lg font-el hide-sm">
                 Your local news aggregate for all things green
               </h2>
               <div id="landing-navigate" className="container is-narrow hide-sm">

@@ -1,7 +1,7 @@
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
-import Comments_but from './comments_page_but'
+import CommentsBut from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
@@ -37,21 +37,21 @@ class Card extends React.Component {
       <div className="row">
         {this.state.articles.map(news => {
           return (
-            <div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
+            <div id={'articlecard-' + this.nextUniqueId()} className="col-lg-4">
             <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-              <div class="card news-item">
+              <div className="card news-item">
                 <a href={news.url}>
                   <img
-                    class="card-img-top"
+                    className="card-img-top"
                     src={news.urlToImage}
-                    alt="Card image"
+                    alt="Article display"
                   />
                 </a>
 
-                <div class="card-body">
-                  <h5 class="card-title">{news.title}</h5>
-                  <p class="card-text">{news.description}</p>
-                  <Comments_but />
+                <div className="card-body">
+                  <h5 className="card-title">{news.title}</h5>
+                  <p className="card-text">{news.description}</p>
+                  <CommentsBut />
                 </div>
               </div>
             </Tilt>

@@ -39,7 +39,6 @@ class Main extends React.Component {
     return (
       <div id="container">
         <NavBar />
-        <SearchBar />
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
@@ -48,7 +47,7 @@ class Main extends React.Component {
         >
           {this.state.items.map((i, index) => (
             <div key={index}>
-              <div class="container">
+              <div className="container">
                 <div id="news-card-area">
                   <Card />
                   <Card />
