@@ -3,8 +3,6 @@ import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
 import Comments_but from './comments_page_but'
 import axios from 'axios'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 class Card extends React.Component {
   constructor() {
@@ -16,10 +14,7 @@ class Card extends React.Component {
   }
 
   componentWillMount() {
-    this.getArticles()
-    AOS.init({
-      duration: 2000,
-    })
+    this.getArticles();
   }
 
   getArticles() {
@@ -60,23 +55,21 @@ class Card extends React.Component {
             <div
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
-              data-aos="fade-up"
             >
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
-                  <a href={news.url}>
+                  <a href={news.url} target="_blank">
                     <img
                       class="card-img-top card-img-top-sm"
                       src={news.urlToImage}
                       alt="Card image"
-                      target="_blank"
                     />
                   </a>
 
                   <div class="card-body">
                     <h5 class="card-title trim">{news.title}</h5>
                     <p class="card-text trim">{news.description}</p>
-                    <div class="trim-sm">
+                    <div class="trim">
                       <Comments_but id={this.lastUniqueId()} />
                     </div>
                   </div>
