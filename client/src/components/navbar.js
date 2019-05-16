@@ -26,8 +26,7 @@ class NavBar extends React.Component {
   render() {
     const test = this.state
     return (
-      
-      <Navbar expand="md" className="sticky-top">
+      <Navbar expand="md" className="sticky-top" id="Opacity">
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
           <Nav className="mx-auto">
             <Cat1_but className="nav_option" />
@@ -48,7 +47,11 @@ class NavBar extends React.Component {
           </Nav>
         </Navbar.Collapse>
 
-        <Navbar.Toggle id="mobile-nav-button" className="order-2" aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          id="mobile-nav-button"
+          className="order-2"
+          aria-controls="basic-navbar-nav"
+        />
       </Navbar>
       
       /*
@@ -100,9 +103,9 @@ class NavBar extends React.Component {
             </div>
           </div>
         </nav>
-      
+
     */
-   )  
+    )
   }
 }
 

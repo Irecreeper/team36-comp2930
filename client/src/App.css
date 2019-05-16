@@ -38,7 +38,7 @@ h2 {
   }
 
   #landing-footer {
-    margin-top: 10%;
+    margin-top: 50px;
   }
 }
 
@@ -58,14 +58,7 @@ h3 {
   font-size: 24pt;
 }
 
-body {
-  background-color: #6C9661;
-  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
-  background-position: center center;
-  background-size: 500px;
-  background-repeat: repeat;
-  animation: AnimationName 10s linear infinite;
-}
+
 html{
    min-height: 100%;
    box-sizing: border-box;
@@ -188,8 +181,16 @@ html{
 @keyframes AnimationName {
   0%{background-position:0px 0px}
 
-  100%{background-position:0px 320px}
+  100%{background-position:0px 450px}
 
+}
+body {
+  background-color: rgb(108, 150, 97);
+  background-image: url(Leaf.png);
+  background-position: center center;
+  background-size: 500px;
+  background-repeat: repeat;
+  animation: AnimationName 4s linear infinite;
 }
 .panel {
   padding: 3rem;
@@ -217,4 +218,20 @@ h1 {
 }
 .col2{
   max-width: 33.33%;
+}
+
+.card-sm {
+  height: 500px;
+  overflow: hidden;
+}
+
+.card-img-top-sm {
+  object-fit: cover;
+  height: 175px;
+}
+
+
+.trim {
+  overflow: hidden;
+  height: 100px;
 }

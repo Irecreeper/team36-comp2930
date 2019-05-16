@@ -9,85 +9,65 @@ class Card extends React.Component {
     super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
-      articles: [],
-    }
-  }
+      articles: this.props.articles
+    };
+}
 
-  componentWillMount() {
-    this.getArticles(this.props.default)
-  }
+componentWillMount() {
+  //this.getArticles();
+}
 
-  getArticles() {
-    axios
-      .get(
-        'https://newsapi.org/v2/everything?q=vancouver%20AND%20environment&sortBy=popularity&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
-      )
-      .then(res => {
-        const articles = res.data.articles
-        console.log(articles)
-        this.setState({ articles: articles })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
+/*
+getArticles() {
+  axios
+    .get(
+      'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&pageSize=21&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
+    )
+    .then(res => {
+      const articles = res.data.articles
+      console.log(articles)
+      this.setState({ articles: articles })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+}
+*/
+
 
   render() {
     return (
       <div className="row">
         {this.state.articles.map(news => {
           return (
-            <div id={'articlecard-' + this.nextUniqueId()} className="col-lg-4">
-            <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-              <div className="card news-item">
-                <a href={news.url}>
-                  <img
-                    className="card-img-top"
-                    src={news.urlToImage}
-                    alt="Article display"
-                  />
-                </a>
-
-                <div className="card-body">
-                  <h5 className="card-title">{news.title}</h5>
-                  <p className="card-text">{news.description}</p>
-                  <CommentsBut />
-                </div>
-              </div>
-            </Tilt>
-            </div>
-          )
-        })}
-      </div>
-
-      /* found this during a merge conflict; take a look?
-      may be broken
-      <div>
-        {this.state.articles.map(news => {
-          return (
-            <div id={'articlecard-' + this.nextUniqueId()} class="col2">
+            <div
+              id={'articlecard-' + this.nextUniqueId()}
+              class="col-lg-4"
+            >
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-                <div class="card news-item">
+                <div class="card card-sm news-item">
                   <a href={news.url} target="_blank">
                     <img
-                      class="card-img-top"
-                      src={news.urlToImage}
+                      class="card-img-top card-img-top-sm"
+                      //src={news.urlToImage}
+                      src={news.image}
                       alt="Card image"
                     />
                   </a>
 
                   <div class="card-body">
-                    <h5 class="card-title">{news.title}</h5>
-
-                    <p class="card-text">{news.description}</p>
-                    <Comments_but />
+                    <h5 class="card-title trim">{news.title}</h5>
+                    <p class="card-text trim">{news.description}</p>
+                    <div class="trim">
+                      <Comments_but id={this.lastUniqueId()} />
+                    </div>
                   </div>
                 </div>
               </Tilt>
             </div>
           )
         })}
-      </div> */
+      </div>
     )
   }
 }
