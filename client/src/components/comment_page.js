@@ -46,6 +46,7 @@ class CommentPage extends React.Component {
                                 <p>
                                     This post is dedicated as a memorial to mankind, and how their avarice and lust for delicious
                                     cooked sausages ended all that they held dear.
+                                    {}
                                 </p>
 
                                 <hr />

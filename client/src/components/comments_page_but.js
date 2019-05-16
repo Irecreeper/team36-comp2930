@@ -9,13 +9,17 @@ class About_us_but extends Component {
   }
 
   go() {
-    this.props.history.push('/comments');
-    this.testID(this.id)
+    this.props.history.push('/comments/' + this.props.id);
+    
+    {/* for testing unique id
+    this.testID(this.props.id)*/}
   }
   
+  /* to test ids
   testID(anID) {
     alert(anID);
   }
+  */
 
   render() {
     return (
@@ -26,7 +30,7 @@ class About_us_but extends Component {
           class="btn btn-primary"
           onClick={this.go}
         >
-          Read Comments
+          Read Comments 
         </button>
       </div>
     )
