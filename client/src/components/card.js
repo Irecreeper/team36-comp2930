@@ -5,29 +5,66 @@ import Comments_but from './comments_page_but'
 import axios from 'axios'
 
 class Card extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
-      articles: []
+      articles: this.props.articles
     };
 }
 
 componentWillMount() {
-  this.getArticles();
+  //this.getArticles();
+  //console.log(this.props.articles);
+  //this.getDbArticles().then(data => console.log(data));
+  //this.getDbTest();
 }
 
+/*
 getArticles() {
   axios.get('https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91')
   .then(res => {
     const articles = res.data.articles;
-    console.log(articles);
+    //console.log(articles);
     this.setState({ articles: articles });
   })
   .catch(error => {
     console.log(error);
   });
 }
+*/
+
+/*
+getDbTest() {
+  
+  console.log("Getting data");
+  axios
+    .get('http://localhost:9000/api')
+    .then(response => {
+      let articles = response.data;
+      console.log(articles);
+    });
+    
+}
+
+
+getDbArticles() {
+  
+  return new Promise((resolve, reject) => {
+    console.log("Running getDbArticles");
+    axios
+      .get('http://localhost:9000/api')
+      .then(response => {
+        resolve(response.data);
+        return;
+      })
+      .catch(error => {
+        reject(error.message);
+        return;
+      });
+  });
+}
+*/
 
   render() {
     return (
@@ -46,7 +83,7 @@ getArticles() {
             <a href={news.url}>
               <img
                 class="card-img-top"
-                src={news.urlToImage}
+                src={news.image}
                 alt="Card image"
               />
             </a>

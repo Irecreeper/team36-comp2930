@@ -7,9 +7,10 @@ class MongoConnection {
 
     open() {
         return new Promise((resolve, reject) => {
-            client.connect("mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/COMP2930-Project")
-                .then(db => {
-                    this.Db = db;
+            client.connect()
+                .then(cluster => {
+                    this.Cluster = cluster;
+                    this.collection = client.db("COMP2930-Project").collection("Articles");
                     resolve();
                 })
                 .catch(error => {
@@ -20,8 +21,8 @@ class MongoConnection {
     }
 
     close() {
-        if (this.Db) {
-            this.Db.close()
+        if (this.Cluster) {
+            this.Cluster.close()
                 .catch(error => console.log(error));
         }
     }
