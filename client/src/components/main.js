@@ -13,7 +13,6 @@ import Card from './card.js'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
-import SearchBar from './searchbar'
 
 import axios from 'axios'
 
@@ -66,7 +65,6 @@ class Main extends React.Component {
     return (
       <div id="container">
         <NavBar />
-        <SearchBar />
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
@@ -86,6 +84,7 @@ class Main extends React.Component {
                 { this.state && this.state.articles && 
                   <Card articles={this.state.articles}/>
                 }
+      
                 </div>
               </div>
             </div>

@@ -10,6 +10,7 @@ import Standards from './images/ecostandards.jpg'
 import Konami from './konami.js'
 
 import NavBar from './navbar.js'
+import { FacebookProvider, Comments } from 'react-facebook'
 
 class CommentPage extends React.Component {
     constructor(props) {
@@ -45,13 +46,14 @@ class CommentPage extends React.Component {
                                 <p>
                                     This post is dedicated as a memorial to mankind, and how their avarice and lust for delicious
                                     cooked sausages ended all that they held dear.
+                                    {}
                                 </p>
 
                                 <hr />
 
-
-                                <div class="fb-comments" data-href="https://vancouvereconews.azurewebsites.net/" data-width="" data-numposts="5"></div>
-
+                                <FacebookProvider appId="281178766160238">
+                                    <Comments />
+                                </FacebookProvider>
                             </div>
                         </div>
                     </div>
