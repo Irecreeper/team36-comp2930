@@ -21,12 +21,18 @@ Given how expansive nature as a topic can be, we hope that VEN's news aggregatio
 ## Our Team
 While the About Us page on the actual website is more casual, this read-me will state who did what in the process of website creation.
 
-Paolo Del Rio - Front End Developer
-Manuel Andaya - Front End Developer
-Zachary Oyama - Back End Developer, Product Owner, Project Management Lead
-Joel Colussi - Back End Lead
-Alec Martin - Front & Back End Developer, Scrum Master
+- Paolo Del Rio - Front End Developer
+- Manuel Andaya - Front End Developer
+- Zachary Oyama - Back End Developer, Product Owner, Project Management Lead
+- Joel Colussi - Back End Lead
+- Alec Martin - Front & Back End Developer, Scrum Master
 
 ## Running VEN on a Localhost
-To run VEN on your own machine, you'll need to do a few things.
-1. 
+To run VEN on your own machine, you'll need to do a few things. Before you do this however, you should ensure that you have node.js  and NPM installed, and the files from this repository downloaded.
+
+- 1. Open up two Command Prompts. Navigate one to the "api" folder, and the other to the "client" folder of VEN's directory.
+- 2. On both Command Prompts, type "npm install". This will download all of the packages that we used in the creation of the webpage.
+- 3. In the Command Prompt that has navigated to the "api" folder, type "npm start". There won't be any indication of completion, but you should be fine to immediately advance to the next step.
+- 4. In the Command Prompt that has nagivated to the "client" folder, type "npm start". Wait, and your web browser should appear, and open up a tab containing the VEN webpage.
+
+You may now look at VEN on your own device!
