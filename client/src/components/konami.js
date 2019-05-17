@@ -1,11 +1,20 @@
-//If the user inputs the konami code, plays a sound byte.
-var key_seq = 0;
+/* 
+A simple script that is present on the webpage.
+Takes user keyboard input, checking for the Konami Code.
 
-document.onkeydown = checkKey;
+Does a variety of things, depending on which page you're on:
+-On most pages, doesn't really do much, and prints "VEN" to the console.
+-On the News Page, hijacks the contents of all news articles, replacing it with "VEN".
+*/
 
-function checkKey(e) {
+var key_seq = 0; //Where the user currently is in the sequence. (goes from 0 - 10)
+
+document.onkeydown = checkKey; //Applies a function to the document that checks for key presses.
+
+function checkKey(e) { //Said function applied to the document.
     e = e || window.event;
 
+    //Weirdly enough, making the =='s into ==='s seems to break it.
     if (e.keyCode == '38') { //up
         if (key_seq === 0 || key_seq === 1) {
             key_seq++;
@@ -44,6 +53,8 @@ function checkKey(e) {
         }
     } else if (e.keyCode == '13') { //enter / start
         if (key_seq === 10) {
+            //If the code reaches here, congratulations; you've inputted the Konami Code!
+
             /*var audio = new Audio('js/ven_ven_ven.mp3');
             audio.play();*/
 
@@ -59,10 +70,11 @@ function checkKey(e) {
                 texts[i].innerHTML = "VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN VEN";
             }
 
-            key_seq = 0;
+            key_seq = 0; //Reset sequence. 
             console.log("VEN");
-        } 
-        key_seq = 0;
+        } else {
+             key_seq = 0;
+        }
     } else { //other
         key_seq = 0;
     }

@@ -1,3 +1,9 @@
+/* 
+The Comments Page that is associated with every article.
+Contains an image, the title, and a somewhat expanded look on the article.
+Also features a section down below to make and read comments.
+*/
+
 import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -17,6 +23,10 @@ class CommentPage extends React.Component {
         this.state = {
             test: true,
         }
+    }
+
+    componentDidMount() {
+        window.FB.XFBML.parse();
     }
 
     render() {
@@ -50,6 +60,7 @@ class CommentPage extends React.Component {
 
                                 <hr />
 
+                                {/* This page makes use of the Facebook Comments API. */}
                                 <FacebookProvider appId="281178766160238">
                                     <Comments />
                                 </FacebookProvider>

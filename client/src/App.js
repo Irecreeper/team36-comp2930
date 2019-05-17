@@ -1,3 +1,13 @@
+/* 
+Basically the "heart of the app."
+Runs when the Landing Page is loaded.
+
+Contains a variety of helpful things, like...
+-the website's router
+-the routes to every page
+-imports for all of the actual webpages
+*/
+
 import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Switch, HashRouter } from 'react-router-dom'
