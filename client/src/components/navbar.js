@@ -31,10 +31,9 @@ class NavBar extends React.Component {
     return (
       <Navbar expand="md" className="sticky-top" id="Opacity">
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
-          <Nav className="mx-auto">
+          <Nav className="mx-auto float-right float-md-none">
             <Cat1_but className="nav_option" />
             <Cat2_but className="nav_option" />
-            <Cat3_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
 
@@ -44,8 +43,7 @@ class NavBar extends React.Component {
         </a>
 
         <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
-          <Nav className="mx-auto">
-            <Cat4_but className="nav_option" />
+          <Nav className="mx-auto float-right float-md-none">
             <About_us_but className="nav_option"/>
             <Contact_but className="nav_option"/>
           </Nav>
