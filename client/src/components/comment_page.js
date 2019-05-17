@@ -19,6 +19,10 @@ class CommentPage extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.FB.XFBML.parse();
+    }
+
     render() {
         const test = this.state;
         return (
