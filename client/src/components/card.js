@@ -73,7 +73,7 @@ getArticles() {
                     <h5 class="card-title trim">{this.state.title}</h5>
                     <p class="card-text trim">{this.state.description}</p>
                     <div class="trim">
-                      <Comments_but id={this.lastUniqueId()} />
+                      <Comments_but id={this.lastUniqueId()} news={news} />
 
                     </div>
                   </div>
