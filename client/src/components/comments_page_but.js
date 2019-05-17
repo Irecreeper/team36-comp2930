@@ -1,3 +1,8 @@
+/* 
+A button that appears on all instances of "Card.js".
+This button will take you to the comments page of the selected news article.
+*/
+
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 

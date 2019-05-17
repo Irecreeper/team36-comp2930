@@ -1,5 +1,17 @@
+/* 
+The CSS for the ENTIRE WEBPAGE. Basically.
+
+Since our app was made with React, we can get away with using this one
+gigantic monster of a CSS file to stylize the whole page.
+*/
+
+
+
+/* Import google fonts. */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=El+Messiri|Roboto');
+
+
 
 /* Some elements will appear / disappear at smaller screen sizes. */
 h1 {
@@ -52,26 +64,30 @@ h2 {
   }
 }
 
-/* End screen-size based area*/
+/* End screen-size based area */
+
+
 
 h3 {
   font-size: 24pt;
 }
 
-
-html{
+html {
    min-height: 100%;
    box-sizing: border-box;
    padding-bottom: 20px;
 
 }
+
 .font-el {
     font-family: 'El Messiri', sans-serif;
 }
+
 .font-el2 {
     font-family: 'El Messiri', sans-serif;
     color: black;
 }
+
 .text-center{
     height: 100%;
 }
@@ -184,6 +200,7 @@ html{
   100%{background-position:0px 450px}
 
 }
+
 body {
   background-color: rgb(108, 150, 97);
   background-image: url(Leaf.png);
@@ -192,6 +209,7 @@ body {
   background-repeat: repeat;
   animation: AnimationName 4s linear infinite;
 }
+
 .panel {
   padding: 3rem;
   height: 100%;
@@ -201,12 +219,9 @@ body {
   padding-top: 50px;
 }
 
-
-
 .about_person {
   height: 100%;
 }
-
 
 h1 {
   color: white;
@@ -229,7 +244,6 @@ h1 {
   object-fit: cover;
   height: 175px;
 }
-
 
 .trim {
   overflow: hidden;

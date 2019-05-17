@@ -1,3 +1,11 @@
+/* 
+The landing page. Actually a deal more advanced than most pages on the site.
+
+The Landing Page has two different formats; on sufficiently small screen sizes, the page 
+changes somewhat to a more mobile-friendly format. While all pages do this, the landing
+page does this to a far greater degree.
+*/
+
 import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -15,14 +23,18 @@ class LandingPage extends React.Component {
     super(props)
     this.state = { apiResponse: '' }
   }
+  /* A test function. */
   callAPI() {
     fetch('http://localhost:9000/testAPI')
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }))
   }
+
+  /* Calls the test function. */
   componentWillMount() {
     this.callAPI()
   }
+
   render() {
     return (
       <div className="text-center text-white">
@@ -45,8 +57,8 @@ class LandingPage extends React.Component {
               <div
                 id="landing-navigate"
                 className="container is-narrow hide-sm"
-              >
-                <div className="row border-between">
+              > {/* Replaced with a more mobile-friendly box on smaller screens. */}
+                <div className="row border-between"> 
                   <div className="col-md-4">
                     <h3 className="font-ro">View Articles</h3>
                   </div>
@@ -64,16 +76,15 @@ class LandingPage extends React.Component {
                 </div>
               </div>
 
-              <div className="show-sm">
+              <div className="show-sm"> {/* Only appears at small screen sizes. */}
                 {' '}
-                {/* Only appears at small sizes. */}
                 <View_art_but />
                 <br />
                 <About_us_but_lp />
               </div>
 
               <footer id="landing-footer">
-                <section className="hide-sm">
+                <section className="hide-sm"> {/* Only appears at bigger screen sizes. */}
                   <About_us_but_lp />
                 </section>
                 <p className="text-on-background-sm font-ro">

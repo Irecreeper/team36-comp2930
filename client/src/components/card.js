@@ -1,3 +1,10 @@
+/* 
+A card that appears on main.js. These cards hold information about news articles
+that we scrape using News API, holding their image, title, and a general description.
+
+Cards will also tilt should you hover over them.
+*/
+
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
@@ -23,6 +30,8 @@ componentWillMount() {
 
 
 /*
+A section of old code.
+
 getArticles() {
   axios
     .get(
