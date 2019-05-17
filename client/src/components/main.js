@@ -80,10 +80,12 @@ class Main extends React.Component {
                 { this.state && this.state.articles && 
                   articles.slice(0).reverse().map(data => 
                     <Card 
+                      _id={data._id}
                       title={data.title} 
                       description={data.description}
                       image={data.image}
                       url={data.url}
+                      
                       />
                   )
                   

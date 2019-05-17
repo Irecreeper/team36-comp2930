@@ -19,6 +19,7 @@ class Card extends React.Component {
     super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
+      _id: this.props._id,
       title: this.props.title,
       description: this.props.description,
       image: this.props.image,
@@ -73,7 +74,7 @@ getArticles() {
                     <h5 class="card-title trim">{this.state.title}</h5>
                     <p class="card-text trim">{this.state.description}</p>
                     <div class="trim">
-                      <Comments_but id={this.lastUniqueId()} news={news} />
+                      <Comments_but id={this.lastUniqueId()} news={this.state} />
 
                     </div>
                   </div>
