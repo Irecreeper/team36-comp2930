@@ -18,7 +18,7 @@ class DbAccess {
                 connection.collection.find({articleNo: {$exists: false}}).toArray()
                 .then(articles => {
                     resolve(articles);
-                    connection.close();
+                    //connection.close();
                 })
                 .catch(error => {
                     reject(error);
