@@ -3,8 +3,7 @@ import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
 import Comments_but from './comments_page_but'
 import axios from 'axios'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { useShallowEqual } from 'shouldcomponentupdate-children'
 
 class Card extends React.Component {
   constructor() {
@@ -17,24 +16,6 @@ class Card extends React.Component {
 
   componentWillMount() {
     this.getArticles()
-    AOS.init({
-      duration: 2000,
-    })
-  }
-
-  getArticles() {
-    axios
-      .get(
-        'https://newsapi.org/v2/everything?q=vancouver%20AND%20environmental%20AND%20%20NOT%20(police%20OR%20vacation)&sortBy=publishedAt&apiKey=0b39a6dc7b46419fa77f079a370ebc91',
-      )
-      .then(res => {
-        const articles = res.data.articles
-        console.log(articles)
-        this.setState({ articles: articles })
-      })
-      .catch(error => {
-        console.log(error)
-      })
   }
 
   getArticles() {
@@ -57,11 +38,7 @@ class Card extends React.Component {
       <div className="row">
         {this.state.articles.map(news => {
           return (
-            <div
-              id={'articlecard-' + this.nextUniqueId()}
-              class="col-lg-4"
-              data-aos="fade-up"
-            >
+            <div id={'articlecard-' + this.nextUniqueId()} class="col-lg-4">
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
                   <a href={news.url}>
@@ -74,10 +51,10 @@ class Card extends React.Component {
                   </a>
 
                   <div class="card-body">
-                    <h5 class="card-title trim">{news.title}</h5>
-                    <p class="card-text trim">{news.description}</p>
+                    <h5 class="card-title trim-sm">{news.title}</h5>
+                    <p class="card-text trim-md">{news.description}</p>
                     <div class="trim-sm">
-                      <Comments_but id={this.lastUniqueId()} />
+                      <Comments_but />
                     </div>
                   </div>
                 </div>
@@ -89,5 +66,6 @@ class Card extends React.Component {
     )
   }
 }
+const PerformantCard = useShallowEqual(Card)
 
-export default Card
+export default PerformantCard

@@ -13,6 +13,7 @@ import Card from './card.js'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
+import { useShallowEqual } from 'shouldcomponentupdate-children'
 
 const style = {
   height: 30,
@@ -31,20 +32,20 @@ class Main extends React.Component {
       this.setState({
         items: this.state.items.concat(Array.from({ length: 2 })),
       })
-    }, 500)
+    }, 0)
   }
 
   render() {
     return (
       <div id="container">
         <NavBar />
-        <InfiniteScroll
-          dataLength={this.state.items.length}
-          next={this.fetchMoreData}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}
-        >
-          {this.state.items.map((i, index) => (
+
+        {this.state.items.map((i, index) => (
+          <InfiniteScroll
+            dataLength={this.state.items.length}
+            next={this.fetchMoreData}
+            hasMore={true}
+          >
             <div key={index}>
               <div class="container">
                 <div id="news-card-area">
@@ -54,11 +55,12 @@ class Main extends React.Component {
                 </div>
               </div>
             </div>
-          ))}
-        </InfiniteScroll>
+          </InfiniteScroll>
+        ))}
       </div>
     )
   }
 }
+const PerformantMain = useShallowEqual(Main)
 
-export default Main
+export default PerformantMain
