@@ -5,8 +5,11 @@ This button will take you to the comments page of the selected news article.
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import { Comments } from 'react-facebook';
 
-class About_us_but extends Component {
+import comment_page from './comment_page';
+
+class comments_but extends Component {
   constructor(props) {
     super(props)
 
@@ -14,19 +17,14 @@ class About_us_but extends Component {
   }
 
   go() {
-    this.props.history.push('/comments/' + this.props.id);
-    
-    {/* for testing unique id
-    this.testID(this.props.id)*/}
+    this.props.history.push({
+      pathname: '/comments/' + this.props.news._id,
+    });
+    localStorage.setItem('news', JSON.stringify(this.props.news));
   }
-  
-  /* to test ids
-  testID(anID) {
-    alert(anID);
-  }
-  */
 
   render() {
+
     return (
       <div className="foo">
         <button
@@ -35,11 +33,11 @@ class About_us_but extends Component {
           class="btn btn-primary"
           onClick={this.go}
         >
-          Read Comments 
+          Read Comments
         </button>
       </div>
     )
   }
 }
 
-export default withRouter(About_us_but)
+export default withRouter(comments_but)
