@@ -1,3 +1,13 @@
+/* 
+Basically the "heart of the app."
+Runs when the Landing Page is loaded.
+
+Contains a variety of helpful things, like...
+-the website's router
+-the routes to every page
+-imports for all of the actual webpages
+*/
+
 import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -13,7 +23,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Switch>
+          <Switch> {/* In order for navigation buttons to work, their paths must be set here. */}
             <Route exact path="/" component={LandingPage} />
             <Route path="/main" component={Main} />
             <Route path="/about" component={About} />

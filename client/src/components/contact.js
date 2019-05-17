@@ -1,3 +1,8 @@
+/* 
+The contact page itself. While currently somewhat bare, there's really not much
+that one would need to contact us about.
+*/
+
 import React from 'react'
 import NavBar from './navbar.js'
 
@@ -23,6 +28,7 @@ class Contact extends React.Component {
             <br />
             Manuel Andaya: mandaya1@my.bcit.ca
             <br /><br />
+            {/* WARNING: Link leads to a Rick Roll. You have been warned.*/}
             For further viewing of VEN's project scope and design, check out our
             project pitch on <a href="https://urlzs.com/WQTA">YouTube</a>.
 

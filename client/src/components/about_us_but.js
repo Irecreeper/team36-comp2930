@@ -1,3 +1,8 @@
+/* 
+The button that takes you to the About Us Page.
+This appears on the header bar.
+*/
+
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
@@ -8,6 +13,7 @@ class About_us_but extends Component {
     this.go = this.go.bind(this)
   }
 
+  //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
     this.props.history.push('/about')
   }

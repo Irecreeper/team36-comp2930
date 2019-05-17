@@ -1,3 +1,8 @@
+/* 
+The 404 page.
+Appears when you head to a page that doesn't exist.
+*/
+
 import React from 'react'
 import NavBar from './navbar.js'
 

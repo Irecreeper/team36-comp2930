@@ -1,3 +1,8 @@
+/* 
+A navigation button that only apepars on the landing page.
+Takes you to the main page.
+*/
+
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Main from './main.js'

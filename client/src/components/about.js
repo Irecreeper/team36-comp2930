@@ -1,3 +1,8 @@
+/* 
+The About Us page. It consists of a few paragraphs about VEN's mission, as well
+as a quick, very casual overview of the five of us who created VEN.
+*/
+
 import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
