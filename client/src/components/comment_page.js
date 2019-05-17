@@ -16,12 +16,13 @@ class CommentPage extends React.Component {
         super(props)
         this.state = {
             test: true,
+            news: JSON.parse(localStorage.getItem('news'))
         }
     }
 
     componentDidMount() {
-        window.FB.XFBML.parse();
     }
+
 
     render() {
         const test = this.state;
@@ -32,24 +33,15 @@ class CommentPage extends React.Component {
                     <div className="container"> {/* Page Content */}
                         <div className="card mb-3">
                             {/* Card Image */}
-                            <a href="#" target="_blank"> {/* Clicking on the image will take you to the article address. */}
-                                <img class="card-img-top" src="https://dummyimage.com/1300x200/000/fff" alt="Article" />
+                            <a href={this.state.news.url} target="_blank"> {/* Clicking on the image will take you to the article address. */}
+                                <img class="card-img-top" src={this.state.news.image} alt="Article" />
                             </a>
 
                             <div className="card-body">
                                 {/* News Article Area */}
-                                <h5 className="card-title">EVERYONE DIES IN OIL SPILL</h5>
+                                <h5 className="card-title">{this.state.news.title}</h5>
                                 <p className="card-text">
-                                    All of your friends and family have been drowned in a big ol' oil spillage! The tragedy occured
-                                    last sunday because somebody dropped their hotdog off a dock. They dove off to grab their dropped
-                                    sausage, and slammed into an oil tanker on the way down. The resulting detonation not only levelled
-                                    the town of Oscarmeyerwienermobile, but sprayed a cubic heckton of burning oil everywhere! This
-                                    killed literally every fish in the ocean, and thus caused everyone to starve to death.
-                                </p>
-                                <p>
-                                    This post is dedicated as a memorial to mankind, and how their avarice and lust for delicious
-                                    cooked sausages ended all that they held dear.
-                                    {}
+                                    {this.state.news.description}
                                 </p>
 
                                 <hr />
@@ -62,8 +54,10 @@ class CommentPage extends React.Component {
                     </div>
                 </div>
             </div>
+
         )
     }
 }
 
+window.FB.XFBML.parse();
 export default CommentPage
