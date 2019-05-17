@@ -1,4 +1,4 @@
-/* 
+/*
 The CSS for the ENTIRE WEBPAGE. Basically.
 
 Since our app was made with React, we can get away with using this one
@@ -259,6 +259,6 @@ h1 {
   transform: translate3d(0, 0px, 0);
 }
 }
-.card{
+.news-item{
   animation: 1s ease-out 0s 1 fade-in;
 }
