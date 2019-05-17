@@ -32,7 +32,7 @@ To run VEN on your own machine, you'll need to do a few things. Before you do th
 
 1. Open up two Command Prompts. Navigate one to the "api" folder, and the other to the "client" folder of VEN's directory.
 2. On both Command Prompts, type "npm install". This will download all of the packages that we used in the creation of the webpage.
-3. In the Command Prompt that has navigated to the "api" folder, type "npm start". There won't be any indication of completion, but you should be fine to immediately advance to the next step.
+3. In the Command Prompt that has navigated to the "api" folder, type "npm start". It'll say something along the lines of "Listening on port 9000."
 4. In the Command Prompt that has nagivated to the "client" folder, type "npm start". Wait, and your web browser should appear, and open up a tab containing the VEN webpage.
 
 You may now look at VEN on your own device!
