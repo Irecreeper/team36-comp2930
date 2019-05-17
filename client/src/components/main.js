@@ -15,6 +15,8 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import NavBar from './navbar'
 import { useShallowEqual } from 'shouldcomponentupdate-children'
 
+import axios from 'axios'
+
 const style = {
   height: 30,
   border: '1px solid green',
@@ -27,12 +29,37 @@ class Main extends React.Component {
     items: Array.from({ length: 2 }),
   }
 
+  componentDidMount() {
+    this.getDbArticles().then(data => {
+      console.log(data);
+      this.setState({articles: data});
+      console.log(this.state.articles);
+    })
+  }
+
   fetchMoreData = () => {
     setTimeout(() => {
       this.setState({
         items: this.state.items.concat(Array.from({ length: 2 })),
       })
     }, 0)
+  }
+
+  getDbArticles() {
+  
+    return new Promise((resolve, reject) => {
+      console.log("Running getDbArticles");
+      axios
+        .get('http://localhost:9000/api')
+        .then(response => {
+          resolve(response.data);
+          return;
+        })
+        .catch(error => {
+          reject(error.message);
+          return;
+        });
+    });
   }
 
   render() {
@@ -48,10 +75,16 @@ class Main extends React.Component {
           >
             <div key={index}>
               <div class="container">
-                <div id="news-card-area">
-                  <Card />
-                  <Card />
-                  <Card />
+                <div id="news-card-area" class="row">
+                { this.state && this.state.articles && 
+                  <Card articles={this.state.articles}/>
+                }
+                { this.state && this.state.articles && 
+                  <Card articles={this.state.articles}/>
+                }
+                { this.state && this.state.articles && 
+                  <Card articles={this.state.articles}/>
+                }
                 </div>
               </div>
             </div>
