@@ -3,6 +3,7 @@
 
 ## What is VEN?
 > hell if I know
+
 Vancouver Eco News, generally abbreviated as VEN, is a local news aggregation website. VEN focuses on news related to the environment and its happenings. Whether it's new innovations on green energy, or perhaps news laws regarding nature, VEN is here to collect information on it for you to see.
 
 VEN also features Facebook integration for use with its comments system. Every article that VEN collects has a place for users to chat about the article they’ve read with other users of the website.
