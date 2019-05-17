@@ -11,6 +11,9 @@ import uniqueID from 'react-html-id'
 import Comments_but from './comments_page_but'
 import axios from 'axios'
 
+import { useShallowEqual } from 'shouldcomponentupdate-children'
+
+
 class Card extends React.Component {
   constructor(props) {
     super(props)
@@ -20,9 +23,11 @@ class Card extends React.Component {
     };
 }
 
+
 componentWillMount() {
   //this.getArticles();
 }
+
 
 /*
 A section of old code.
@@ -69,6 +74,7 @@ getArticles() {
                     <p class="card-text trim">{news.description}</p>
                     <div class="trim">
                       <Comments_but id={this.lastUniqueId()} />
+
                     </div>
                   </div>
                 </div>
@@ -80,5 +86,6 @@ getArticles() {
     )
   }
 }
+const PerformantCard = useShallowEqual(Card)
 
-export default Card
+export default PerformantCard
