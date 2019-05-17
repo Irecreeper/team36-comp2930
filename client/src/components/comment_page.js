@@ -27,6 +27,7 @@ class CommentPage extends React.Component {
     }
 
     componentDidMount() {
+        window.FB.XFBML.parse();
     }
 
 
@@ -66,5 +67,4 @@ class CommentPage extends React.Component {
     }
 }
 
-window.FB.XFBML.parse();
 export default CommentPage
