@@ -9,7 +9,10 @@ class Card extends React.Component {
     super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
-      articles: this.props.articles
+      title: this.props.title,
+      description: this.props.description,
+      image: this.props.image,
+      url: this.props.url
     };
 }
 
@@ -37,27 +40,24 @@ getArticles() {
 
   render() {
     return (
-      <div className="row">
-        {this.state.articles.map(news => {
-          return (
             <div
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
             >
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
-                  <a href={news.url} target="_blank">
+                  <a href={this.state.url} target="_blank">
                     <img
                       class="card-img-top card-img-top-sm"
                       //src={news.urlToImage}
-                      src={news.image}
+                      src={this.state.image}
                       alt="Card image"
                     />
                   </a>
 
                   <div class="card-body">
-                    <h5 class="card-title trim">{news.title}</h5>
-                    <p class="card-text trim">{news.description}</p>
+                    <h5 class="card-title trim">{this.state.title}</h5>
+                    <p class="card-text trim">{this.state.description}</p>
                     <div class="trim">
                       <Comments_but id={this.lastUniqueId()} />
                     </div>
@@ -65,9 +65,6 @@ getArticles() {
                 </div>
               </Tilt>
             </div>
-          )
-        })}
-      </div>
     )
   }
 }
