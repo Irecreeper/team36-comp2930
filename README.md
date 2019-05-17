@@ -17,3 +17,16 @@ When it comes to finding news about our environment, there's so many places to l
 Given how expansive nature as a topic can be, we hope that VEN's news aggregation will help you learn everything you need to about the place you call home. It'll also help you realize how Vancouver succeeds or fails as an EcoCity, as suggested by the EcoCity Standards.
 
 ![standards](https://raw.githubusercontent.com/Irecreeper/team36-comp2930/master/client/src/components/images/ecostandards.jpg)
+
+## Our Team
+While the About Us page on the actual website is more casual, this read-me will state who did what in the process of website creation.
+
+Paolo Del Rio - Front End Developer
+Manuel Andaya - Front End Developer
+Zachary Oyama - Back End Developer, Product Owner, Project Management Lead
+Joel Colussi - Back End Lead
+Alec Martin - Front & Back End Developer, Scrum Master
+
+## Running VEN on a Localhost
+To run VEN on your own machine, you'll need to do a few things.
+1. 
