@@ -90,6 +90,7 @@ class Main extends React.Component {
                 { this.state && this.state.articles && this.state.articleCount && (
                   articleCount--,
                     <Card 
+                      _id={articles[articleCount]._id}
                       title={articles[articleCount].title} 
                       description={articles[articleCount].description}
                       image={articles[articleCount].image}
@@ -100,6 +101,7 @@ class Main extends React.Component {
                 { this.state && this.state.articles && this.state.articleCount && (
                   articleCount--,
                     <Card 
+                      _id={articles[articleCount]._id}
                       title={articles[articleCount].title} 
                       description={articles[articleCount].description}
                       image={articles[articleCount].image}
@@ -110,6 +112,7 @@ class Main extends React.Component {
                 { this.state && this.state.articles && this.state.articleCount && (
                   articleCount--,
                     <Card 
+                      _id={articles[articleCount]._id}
                       title={articles[articleCount].title} 
                       description={articles[articleCount].description}
                       image={articles[articleCount].image}
