@@ -85,7 +85,7 @@ class Main extends React.Component {
         >
           
             <div key={index}>
-              <div class="container">
+              <div className="container">
                 <div id="news-card-area" class="row">
                 { this.state && this.state.articles && this.state.articleCount && (
                   articleCount--,
