@@ -50,7 +50,9 @@ class LandingPage extends React.Component {
                 fluid
                 rounded
               />
-              <h1 className="text-on-background-lg font-el">Vancouver Eco News</h1>
+              <h1 className="text-on-background-lg font-el">
+                Vancouver Eco News
+              </h1>
               <h2 className="text-on-background-lg font-el hide-sm">
                 Your local news aggregate for all things green
               </h2>

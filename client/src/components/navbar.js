@@ -1,4 +1,4 @@
-/* 
+/*
 The navigation bar. With the expection of the Landing Page, it appears on every page.
 Using some bootstrap properties, the NavBar sticks to the top of the page, scrolling
 with the user.
@@ -36,24 +36,22 @@ class NavBar extends React.Component {
             <Cat2_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
-
         {/* The logo! Note that the order-# tags move it around based on screen size. */}
         <a className="navbar-brand order-1 order-md-2" href="/"> {/* The logo of VEN. */}
           <Image src={Logo} className="Logo_Image" fluid rounded />
         </a>
-
-        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3"> {/* Last two nav options. */}
-          <Nav className="mx-auto float-right float-md-none"> 
-            <About_us_but className="nav_option"/>
-            <Contact_but className="nav_option"/>
+        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">  {/* Last two nav options. */}
+          <Nav className="mx-auto float-right float-md-none">
+            <About_us_but className="nav_option" />
+            <Contact_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
-
         <Navbar.Toggle
           id="mobile-nav-button"
           className="order-2"
           aria-controls="basic-navbar-nav"
-        /> {/* This toggles the navbar on smaller screen sizes. */}
+        />{' '}
+        {/* This toggles the navbar on smaller screen sizes. */}
       </Navbar>
     )
   }

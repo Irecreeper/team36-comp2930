@@ -63,6 +63,7 @@ class Main extends React.Component {
   }
 
   render() {
+    let articles = this.state.articles;
     return (
       <div id="container">
         <NavBar />
@@ -77,13 +78,17 @@ class Main extends React.Component {
               <div class="container">
                 <div id="news-card-area" class="row">
                 { this.state && this.state.articles && 
-                  <Card articles={this.state.articles}/>
-                }
-                { this.state && this.state.articles && 
-                  <Card articles={this.state.articles}/>
-                }
-                { this.state && this.state.articles && 
-                  <Card articles={this.state.articles}/>
+                  articles.slice(0).reverse().map(data => 
+                    <Card 
+                      _id={data._id}
+                      title={data.title} 
+                      description={data.description}
+                      image={data.image}
+                      url={data.url}
+                      
+                      />
+                  )
+                  
                 }
                 </div>
               </div>

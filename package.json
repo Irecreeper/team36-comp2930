@@ -1,0 +1,13 @@
+{
+  "name": "run",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm start",
+    "api": "cd api && npm start",
+    "start": "concurrently \"npm run client\" \"npm run api\" "
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0"
+  }
+}

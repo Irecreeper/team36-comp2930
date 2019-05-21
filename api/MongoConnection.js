@@ -6,9 +6,14 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/test?retryWrites=true"; //The address of our database!
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
+/*
+    Provides methods to open and close the connection the specified collection and
+    database on MongoDB.
+*/
 class MongoConnection {
 
-    open() { //Open a connection
+    //Opens the connection to the specified collection
+    open() {
         return new Promise((resolve, reject) => {
             client.connect()
                 .then(cluster => {
@@ -23,7 +28,8 @@ class MongoConnection {
         });
     }
 
-    close() { //Close the connection
+    //Closes the connection to the database
+    close() {
         if (this.Cluster) {
             this.Cluster.close()
                 .catch(error => console.log(error));
