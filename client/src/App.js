@@ -22,11 +22,14 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/main" component={Main} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/comments" component={Comments} />
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/main" component={Main} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/comments" component={Comments} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </HashRouter>
     )
   }
