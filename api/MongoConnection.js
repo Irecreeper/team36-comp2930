@@ -1,6 +1,9 @@
+/* 
+Provides a connection to MongoDB.
+*/
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/test?retryWrites=true"; //The address of our database!
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
 /*
@@ -15,12 +18,12 @@ class MongoConnection {
             client.connect()
                 .then(cluster => {
                     this.Cluster = cluster;
-                    this.collection = client.db("COMP2930-Project").collection("Articles");
-                    resolve();
+                    this.collection = client.db("COMP2930-Project").collection("Articles"); //the section of the database to access
+                    resolve(); //success!
                 })
                 .catch(error => {
                     console.log(error);
-                    reject();
+                    reject(); //failure!
                 });
         });
     }

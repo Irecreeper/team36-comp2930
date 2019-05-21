@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
+/* 
+This does a variety of things related to starting the server.
+-Creates the HTTP server, which listens on a designated port.
+-Creates and activates an event listener.
+-Displays a message, just so you know it'sl istening.
+*/
+
 /**
  * Module dependencies.
  */

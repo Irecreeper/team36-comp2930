@@ -13,6 +13,7 @@ import Card from './card.js'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import NavBar from './navbar'
+import { useShallowEqual } from 'shouldcomponentupdate-children'
 
 import axios from 'axios'
 
@@ -119,11 +120,12 @@ class Main extends React.Component {
                 </div>
               </div>
             </div>
-          ))}
-        </InfiniteScroll>
+          </InfiniteScroll>
+        ))}
       </div>
     )
   }
 }
+const PerformantMain = useShallowEqual(Main)
 
-export default Main
+export default PerformantMain

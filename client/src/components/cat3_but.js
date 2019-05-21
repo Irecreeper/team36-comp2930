@@ -1,3 +1,8 @@
+/* 
+A simple button that appears on the header navigation bar.
+Vaguely named in case we want to change the category without reformatting the webpage.
+*/
+
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Main from './main.js'
@@ -9,6 +14,7 @@ class Cat3_but extends Component {
     this.go = this.go.bind(this)
   }
 
+  //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
     this.props.history.push('/main')
   }

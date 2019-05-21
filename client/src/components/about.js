@@ -1,3 +1,8 @@
+/* 
+The About Us page. It consists of a few paragraphs about VEN's mission, as well
+as a quick, very casual overview of the five of us who created VEN.
+*/
+
 import React from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -31,20 +36,21 @@ class About extends React.Component {
         <NavBar />
         <div class="contain">
         <div id="main-content" class="container">
+          {/* About Company */}
           <h1 class="font-el2">What is VEN?</h1>
           <p>
             VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
             aggregator that collects articles on the environment from our
             various trusted sources, and places them all in one webpage for
-            easy, comfy viewing! You may also anonymously chat about these
-            articles with other Vancouverites using VEN’s built in commenting
-            functionality!
+            easy, comfy viewing! You may also chat about these 
+            articles with other Vancouverites using VEN’s built in comments page, 
+            which makes use of the Facebook Comments API.
           </p>
 
           <p>
             This website was built using HTML5, CSS3, JavaScript, Bootstrap and
             ReactJS on the front-end, while MongoDB and NodeJS were used for the
-            back-end. Our website is hosted on Amazon Web Services. It was also
+            back-end. Our website is hosted on Microsoft Azure. It was also
             specifically designed for BCIT’s second-term Projects Course, which
             was sponsored by the folks at EcoCity.
           </p>
@@ -79,12 +85,13 @@ class About extends React.Component {
           <p>
             Only with proper knowledge can we truly make Vancouver a true
             EcoCity. Be sure to check VEN daily to see Vancouver’s current
-            status, and perhaps learn what you can do to help our environment-
-            every little bit helps!
+            status, and perhaps learn what you can do to help our environment.
+            Every little bit helps!
           </p>
 
+          {/* About Staff */}
           <h1 class="font-el2">The People of VEN</h1>
-          <p>Here is the team of nerds that worked on VEN.</p>
+          <p>Here is a brief overview of those who worked on VEN.</p>
           <div class="row">
             <div class="col-md-4 about_person">
               <h2 class="font-el text-center">Manuel</h2>

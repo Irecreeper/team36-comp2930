@@ -1,11 +1,14 @@
+/*
+The navigation bar. With the expection of the Landing Page, it appears on every page.
+Using some bootstrap properties, the NavBar sticks to the top of the page, scrolling
+with the user.
+
+It holds a variety of buttons that lead the user around the webpage.
+*/
+
 import React from 'react'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import View_art_but from './view_art_but.js'
-import { CSSTransition } from 'react-transition-group'
 import Image from 'react-bootstrap/Image'
 import Logo from './images/ven_logo.png'
 
@@ -26,85 +29,30 @@ class NavBar extends React.Component {
   render() {
     const test = this.state
     return (
-      <Navbar expand="md" className="sticky-top" id="Opacity">
-        <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
-          <Nav className="mx-auto">
+      <Navbar expand="md" className="sticky-top" id="Opacity"> 
+        <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1"> {/* First two nav options. */}
+          <Nav className="mx-auto float-right float-md-none">
             <Cat1_but className="nav_option" />
             <Cat2_but className="nav_option" />
-            <Cat3_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
-
-        <a className="navbar-brand order-1 order-md-2" href="/">
+        {/* The logo! Note that the order-# tags move it around based on screen size. */}
+        <a className="navbar-brand order-1 order-md-2" href="/"> {/* The logo of VEN. */}
           <Image src={Logo} className="Logo_Image" fluid rounded />
         </a>
-
-        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
-          <Nav className="mx-auto">
-            <Cat4_but className="nav_option" />
-            <About_us_but className="nav_option"/>
-            <Contact_but className="nav_option"/>
+        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">  {/* Last two nav options. */}
+          <Nav className="mx-auto float-right float-md-none">
+            <About_us_but className="nav_option" />
+            <Contact_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
-
         <Navbar.Toggle
           id="mobile-nav-button"
           className="order-2"
           aria-controls="basic-navbar-nav"
-        />
+        />{' '}
+        {/* This toggles the navbar on smaller screen sizes. */}
       </Navbar>
-      
-      /*
-        old navbar code
-
-        <nav class="navbar navbar-expand-md fixed-top">
-          <div class="container">
-            <div class="navbar-collapse collapse nav-content order-2">
-              <div class="row mx-auto">
-                <div class="col-md-6">
-                  <Environment_but />
-                </div>
-                <div class="col-md-6">
-                  <button
-                    class="btn btn-success nav-option"
-                    type="button"
-                  >
-                    Politics
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
-              <a class="navbar-brand" href="/">
-                <Image src={Logo} className="Logo_Image" fluid rounded />
-              </a>
-              <button
-                id="mobile-nav-button"
-                class="navbar-toggler ml-2"
-                type="button"
-                data-toggle="collapse"
-                data-target=".nav-content"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon" />
-              </button>
-            </div>
-            <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
-              <div class="row mx-auto">
-                <section class="col-md-6">
-                  <About_us_but />
-                </section>
-
-                <section class="col-md-6">
-                  <Contact_but />
-                </section>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-    */
     )
   }
 }

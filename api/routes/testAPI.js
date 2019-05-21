@@ -1,3 +1,7 @@
+/* 
+A test function.
+Sends a message that the API is working properly.
+*/
 var express = require('express')
 var router = express.Router()
 

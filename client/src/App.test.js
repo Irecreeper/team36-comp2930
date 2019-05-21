@@ -1,3 +1,7 @@
+/*
+A mysterious default file that we dare not touch.
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

@@ -1,14 +1,25 @@
+/* 
+A card that appears on main.js. These cards hold information about news articles
+that we scrape using News API, holding their image, title, and a general description.
+
+Cards will also tilt should you hover over them.
+*/
+
 import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
 import Comments_but from './comments_page_but'
 import axios from 'axios'
 
+import { useShallowEqual } from 'shouldcomponentupdate-children'
+
+
 class Card extends React.Component {
   constructor(props) {
     super(props)
     uniqueID.enableUniqueIds(this)
     this.state = {
+      _id: this.props._id,
       title: this.props.title,
       description: this.props.description,
       image: this.props.image,
@@ -16,11 +27,15 @@ class Card extends React.Component {
     };
 }
 
+
 componentWillMount() {
   //this.getArticles();
 }
 
+
 /*
+A section of old code.
+
 getArticles() {
   axios
     .get(
@@ -44,6 +59,7 @@ getArticles() {
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
             >
+              {/* The whole card tilts when you hover over it! */}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
                   <a href={this.state.url} target="_blank">
@@ -59,7 +75,8 @@ getArticles() {
                     <h5 class="card-title trim">{this.state.title}</h5>
                     <p class="card-text trim">{this.state.description}</p>
                     <div class="trim">
-                      <Comments_but id={this.lastUniqueId()} />
+                      <Comments_but id={this.lastUniqueId()} news={this.state} /> {/* repeats ID for ease of use */}
+
                     </div>
                   </div>
                 </div>
@@ -68,5 +85,6 @@ getArticles() {
     )
   }
 }
+const PerformantCard = useShallowEqual(Card) //
 
-export default Card
+export default PerformantCard
