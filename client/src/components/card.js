@@ -58,12 +58,12 @@ getArticles() {
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
             >
+              {/* The whole card tilts when you hover over it! */}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
                   <a href={news.url} target="_blank">
                     <img
                       class="card-img-top card-img-top-sm"
-                      //src={news.urlToImage}
                       src={news.image}
                       alt="Card image"
                     />
@@ -73,7 +73,7 @@ getArticles() {
                     <h5 class="card-title trim">{news.title}</h5>
                     <p class="card-text trim">{news.description}</p>
                     <div class="trim">
-                      <Comments_but id={this.lastUniqueId()} />
+                      <Comments_but id={this.lastUniqueId()} /> {/* repeats ID for ease of use */}
 
                     </div>
                   </div>
@@ -86,6 +86,6 @@ getArticles() {
     )
   }
 }
-const PerformantCard = useShallowEqual(Card)
+const PerformantCard = useShallowEqual(Card) //
 
 export default PerformantCard

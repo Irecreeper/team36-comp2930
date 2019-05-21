@@ -29,8 +29,8 @@ class NavBar extends React.Component {
   render() {
     const test = this.state
     return (
-      <Navbar expand="md" className="sticky-top" id="Opacity">
-        <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1">
+      <Navbar expand="md" className="sticky-top" id="Opacity"> 
+        <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1"> {/* First two nav options. */}
           <Nav className="mx-auto float-right float-md-none">
             <Cat1_but className="nav_option" />
             <Cat2_but className="nav_option" />
@@ -38,12 +38,12 @@ class NavBar extends React.Component {
         </Navbar.Collapse>
 
         {/* The logo! Note that the order-# tags move it around based on screen size. */}
-        <a className="navbar-brand order-1 order-md-2" href="/">
+        <a className="navbar-brand order-1 order-md-2" href="/"> {/* The logo of VEN. */}
           <Image src={Logo} className="Logo_Image" fluid rounded />
         </a>
 
-        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">
-          <Nav className="mx-auto float-right float-md-none">
+        <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3"> {/* Last two nav options. */}
+          <Nav className="mx-auto float-right float-md-none"> 
             <About_us_but className="nav_option"/>
             <Contact_but className="nav_option"/>
           </Nav>

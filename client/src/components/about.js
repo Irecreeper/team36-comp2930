@@ -36,6 +36,7 @@ class About extends React.Component {
         <NavBar />
         <div class="contain">
         <div id="main-content" class="container">
+          {/* About Company */}
           <h1 class="font-el2">What is VEN?</h1>
           <p>
             VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
@@ -88,6 +89,7 @@ class About extends React.Component {
             Every little bit helps!
           </p>
 
+          {/* About Staff */}
           <h1 class="font-el2">The People of VEN</h1>
           <p>Here is a brief overview of those who worked on VEN.</p>
           <div class="row">

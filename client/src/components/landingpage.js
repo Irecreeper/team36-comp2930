@@ -23,7 +23,7 @@ class LandingPage extends React.Component {
     super(props)
     this.state = { apiResponse: '' }
   }
-  /* A test function. */
+  /* A test function to ensure that the API is working. */
   callAPI() {
     fetch('http://localhost:9000/testAPI')
       .then(res => res.text())
@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
       <div className="text-center text-white">
         <div className="container2">
           <div className="panel top">
-            <p>{this.state.apiResponse}</p>
+            {/*<p>{this.state.apiResponse}</p>*/}
             <main role="main" className="cover">
               <Image
                 src={Logo}
