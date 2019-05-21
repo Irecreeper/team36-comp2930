@@ -15,6 +15,7 @@ import Standards from './images/ecostandards.jpg'
 import Konami from './konami.js'
 
 import NavBar from './navbar.js'
+import VENLogo from './images/ven_logo.png'
 import { FacebookProvider, Comments } from 'react-facebook'
 
 class CommentPage extends React.Component {
@@ -41,7 +42,13 @@ class CommentPage extends React.Component {
                         <div className="card mb-3">
                             {/* Card Image */}
                             <a href={this.state.news.url} target="_blank"> {/* Clicking on the image will take you to the article address. */}
-                                <img class="card-img-top" src={this.state.news.image} alt="Article" />
+                                <img 
+                                    class="card-img-top"
+                                    src={this.state.news.image}
+                                    ref={img => this.img = img} 
+                                    onError={() => this.img.src = VENLogo}
+                                    alt="Article"
+                                />
                             </a>
 
                             <div className="card-body">
