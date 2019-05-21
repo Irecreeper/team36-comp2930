@@ -59,6 +59,7 @@ getArticles() {
               id={'articlecard-' + this.nextUniqueId()}
               class="col-lg-4"
             >
+              {/* The whole card tilts when you hover over it! */}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
                 <div class="card card-sm news-item">
                   <a href={this.state.url} target="_blank">
@@ -74,7 +75,7 @@ getArticles() {
                     <h5 class="card-title trim">{this.state.title}</h5>
                     <p class="card-text trim">{this.state.description}</p>
                     <div class="trim">
-                      <Comments_but id={this.lastUniqueId()} news={this.state} />
+                      <Comments_but id={this.lastUniqueId()} news={this.state} /> {/* repeats ID for ease of use */}
 
                     </div>
                   </div>
@@ -84,6 +85,6 @@ getArticles() {
     )
   }
 }
-const PerformantCard = useShallowEqual(Card)
+const PerformantCard = useShallowEqual(Card) //
 
 export default PerformantCard

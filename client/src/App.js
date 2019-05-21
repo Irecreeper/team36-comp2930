@@ -21,7 +21,7 @@ import NotFound from './components/404.js'
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <HashRouter> {/* The hashrouter contains paths. When these paths are called, they will load their respective component. */}
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/main" component={Main} />
