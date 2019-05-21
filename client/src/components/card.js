@@ -9,6 +9,7 @@ import React from 'react'
 import Tilt from 'react-tilt'
 import uniqueID from 'react-html-id'
 import Comments_but from './comments_page_but'
+import VENLogo from './images/ven_logo.png'
 import axios from 'axios'
 
 import { useShallowEqual } from 'shouldcomponentupdate-children'
@@ -57,24 +58,26 @@ getArticles() {
     return (
             <div
               id={'articlecard-' + this.nextUniqueId()}
-              class="col-lg-4"
+              className="col-lg-4"
             >
               {/* The whole card tilts when you hover over it! */}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>
-                <div class="card card-sm news-item">
+                <div className="card card-sm news-item">
                   <a href={this.state.url} target="_blank">
                     <img
-                      class="card-img-top card-img-top-sm"
+                      className="card-img-top card-img-top-sm"
                       //src={news.urlToImage}
                       src={this.state.image}
+                      ref={img => this.img = img} 
+                      onError={() => this.img.src = VENLogo}
                       alt="Card image"
                     />
                   </a>
 
-                  <div class="card-body">
-                    <h5 class="card-title trim">{this.state.title}</h5>
-                    <p class="card-text trim">{this.state.description}</p>
-                    <div class="trim">
+                  <div className="card-body">
+                    <h5 className="card-title trim">{this.state.title}</h5>
+                    <p className="card-text trim">{this.state.description}</p>
+                    <div className="trim">
                       <Comments_but id={this.lastUniqueId()} news={this.state} /> {/* repeats ID for ease of use */}
 
                     </div>
