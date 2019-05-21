@@ -24,14 +24,15 @@ class Contact extends React.Component {
           <div id="main-content" class="container">
             <p>
               The URL you tried to access did not exist on our servers. Perhaps you followed 
-              a faulty link, tried to input a link directly in the URL, or something on our
-              end broke? We can't really be sure, sorry!
+              a faulty link, misinput the URL, or the page no longer exists due to a change 
+              in website structure? Who really knows, besides Paolo? He better not have freaking
+              screwed with the structure again, that piece of-
             </p>
             <p>
-              Fortunately, your journey doesn't end here! You can either make use of the Navigation
-              Bar above to go back to the website, and read some amazing articles! Or perhaps, you 
-              can just click on this button down here to return to the landing page. It doesn't really
-              matter too much.
+              ...Fortunately, your journey doesn't end here! You can either <b>make use of the Navigation
+              Bar above</b> to go back to the website, and read some amazing articles about our planet! Or
+              perhaps, you can just <b>click on this button at the bottom of the box</b> to return to the 
+              landing page. It doesn't really matter too much.
             </p>
             <div className="d-flex justify-content-center">
               <Button404 />
