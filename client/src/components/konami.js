@@ -19,7 +19,7 @@ function checkKey(e) { //Said function applied to the document.
         if (key_seq === 0 || key_seq === 1) {
             key_seq++;
         } else {
-            key_seq = 0;
+            key_seq = 1; //set to 1, as it's the start of the code
         }
     } else if (e.keyCode == '40') { //down
         if (key_seq === 2 || key_seq === 3) {
