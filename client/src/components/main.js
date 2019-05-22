@@ -32,11 +32,28 @@ class Main extends React.Component {
 
   componentDidMount() {
     this.getDbArticles().then(data => {
-      console.log(data);
       this.setState({articles: data});
       this.setState({articleCount: this.state.articles.length});
       console.log(this.state.articles);
-      console.log(this.state.articleCount);
+      console.log("Number of unsorted articles: " + this.state.articleCount);
+    })
+    this.getDbArticlesEnergy().then(data => {
+      this.setState({articlesEnergy: data});
+      this.setState({articleCountEnergy: this.state.articlesEnergy.length});
+      console.log(this.state.articlesEnergy);
+      console.log("Number of energy articles: " + this.state.articleCountEnergy);
+    })
+    this.getDbArticlesPollution().then(data => {
+      this.setState({articlesPollution: data});
+      this.setState({articleCountPollution: this.state.articlesPollution.length});
+      console.log(this.state.articlesPollution);
+      console.log("Number of pollution articles: " + this.state.articleCountPollution)
+    })
+    this.getDbArticlesRecycling().then(data => {
+      this.setState({articlesRecycling: data});
+      this.setState({articleCountRecycling: this.state.articlesRecycling.length});
+      console.log(this.state.articlesRecycling);
+      console.log("Number of recycling articles: " + this.state.articleCountRecycling);
     })
   }
 
@@ -71,19 +88,66 @@ class Main extends React.Component {
     });
   }
 
+  getDbArticlesEnergy() {
+    return new Promise((resolve, reject) => {
+      console.log("Running getDbArticles");
+      axios
+        .get('http://localhost:9000/api/energy')
+        .then(response => {
+          resolve(response.data);
+          return;
+        })
+        .catch(error => {
+          reject(error.message);
+          return;
+        });
+    });
+  }
+
+  getDbArticlesPollution() {
+    return new Promise((resolve, reject) => {
+      console.log("Running getDbArticles");
+      axios
+        .get('http://localhost:9000/api/pollution')
+        .then(response => {
+          resolve(response.data);
+          return;
+        })
+        .catch(error => {
+          reject(error.message);
+          return;
+        });
+    });
+  }
+
+  getDbArticlesRecycling() {
+    return new Promise((resolve, reject) => {
+      console.log("Running getDbArticles");
+      axios
+        .get('http://localhost:9000/api/recycling')
+        .then(response => {
+          resolve(response.data);
+          return;
+        })
+        .catch(error => {
+          reject(error.message);
+          return;
+        });
+    });
+  }
+
   render() {
     let articles = this.state.articles;
     var articleCount = this.state.articleCount;
     return (
       <div id="container">
         <NavBar />
-        {this.state.items.map((i, index) => (
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
           hasMore={this.state.hasMore}
         >
-          
+          {this.state.items.map((i, index) => ( //This map should remain inside the InfiniteScroll
             <div key={index}>
               <div className="container">
                 <div id="news-card-area" class="row">
@@ -122,9 +186,9 @@ class Main extends React.Component {
                 }
                 </div>
               </div>
-            </div>
-          </InfiniteScroll>
+            </div>         
         ))}
+        </InfiniteScroll>
       </div>
     )
   }
