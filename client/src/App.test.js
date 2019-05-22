@@ -1,5 +1,5 @@
 /*
-A mysterious default file that we dare not touch.
+A test file.
 */
 
 import React from 'react';

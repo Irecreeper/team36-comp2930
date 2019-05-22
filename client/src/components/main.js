@@ -75,8 +75,8 @@ class Main extends React.Component {
             hasMore={true}
           >
             <div key={index}>
-              <div class="container">
-                <div id="news-card-area" class="row">
+              <div className="container">
+                <div id="news-card-area" className="row">
                 { this.state && this.state.articles && 
                   articles.slice(0).reverse().map(data => 
                     <Card 

@@ -24,7 +24,7 @@ class Contact_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-secondary nav-option"
+          className="btn btn-secondary nav-option"
           onClick={this.go}
         >
           Contact
