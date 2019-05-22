@@ -19,6 +19,9 @@ class MongoConnection {
                 .then(cluster => {
                     this.Cluster = cluster;
                     this.collection = client.db("COMP2930-Project").collection("Articles"); //the section of the database to access
+                    this.collectionEnergy = client.db("COMP2930-Project").collection("EnergyArticles");
+                    this.collectionPollution = client.db("COMP2930-Project").collection("PollutionArticles");
+                    this.collectionRecycling = client.db("COMP2930-Project").collection("RecyclingArticles");
                     resolve(); //success!
                 })
                 .catch(error => {
