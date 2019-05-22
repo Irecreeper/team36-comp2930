@@ -18,7 +18,7 @@ class comments_but extends Component {
 
   go() {
     this.props.history.push({
-      pathname: '/comments/' + this.props.news._id,
+      pathname: '/comments/' + this.props.news.title,
     });
     localStorage.setItem('news', JSON.stringify(this.props.news));
   }
