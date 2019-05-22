@@ -21,11 +21,11 @@ Given how expansive nature as a topic can be, we hope that VEN's news aggregatio
 ## Our Team
 While the About Us page on the actual website is more casual, this read-me will state who did what in the process of website creation.
 
-- Paolo Del Rio - Front End Developer
-- Manuel Andaya - Front End Developer
-- Zachary Oyama - Back End Developer, Product Owner, Project Management Lead
-- Joel Colussi - Back End Lead
-- Alec Martin - Front & Back End Developer, Scrum Master
+- Paolo Del Rio - Design Lead, Front End Support
+- Manuel Andaya - Team Contact Lead, Front End Support, Back End Support
+- Zachary Oyama - Project Management Lead, UX Lead, Back End Support.
+- Joel Colussi - Back End Lead, Database Lead
+- Alec Martin - Front End Lead, Microservice Lead. 
 
 ## Running VEN on a Localhost
 To run VEN on your own machine, you'll need to do a few things. Before you do this however, you should ensure that you have node.js  and NPM installed, and the files from this repository downloaded.
