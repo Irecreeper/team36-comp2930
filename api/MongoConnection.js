@@ -40,6 +40,5 @@ class MongoConnection {
         }
     }
   }
-}
 
 module.exports = MongoConnection
