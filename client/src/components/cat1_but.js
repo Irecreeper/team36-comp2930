@@ -16,7 +16,7 @@ class Cat1_but extends Component {
   
   //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
-    this.props.history.push('/main')
+    this.props.callback();
   }
 
   render() {
@@ -28,7 +28,7 @@ class Cat1_but extends Component {
           className="btn btn-success nav-option"
           onClick={this.go}
         >
-          Category 1
+          Energy
         </button>
       </div>
     )

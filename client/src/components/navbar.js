@@ -32,9 +32,9 @@ class NavBar extends React.Component {
       <Navbar expand="md" className="sticky-top" id="Opacity"> 
         <Navbar.Collapse id="basic-navbar-nav" className="order-3 order-md-1"> {/* First two nav options. */}
           <Nav className="mx-auto float-right float-md-none">
-            <Cat1_but className="nav_option" />
-            <Cat2_but className="nav_option" />
-            <Cat3_but className="nav_option" />
+            <Cat1_but className="nav_option" callback = {this.props.callback} />
+            <Cat2_but className="nav_option" callback2 = {this.props.callback2} />
+            <Cat3_but className="nav_option" callback3 = {this.props.callback3} />
           </Nav>
         </Navbar.Collapse>
         {/* The logo! Note that the order-# tags move it around based on screen size. */}
@@ -43,7 +43,7 @@ class NavBar extends React.Component {
         </a>
         <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">  {/* Last two nav options. */}
           <Nav className="mx-auto float-right float-md-none">
-            <Cat4_but className="nav_option" />
+            <Cat4_but className="nav_option" callback4 = {this.props.callback4} />
             <About_us_but className="nav_option" />
             <Contact_but className="nav_option" />
           </Nav>
