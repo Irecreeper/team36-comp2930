@@ -31,6 +31,7 @@ class Main extends React.Component {
     hasMore: true
   }
 
+  //
   componentDidMount() {
     this.getDbArticles().then(data => {
       this.setState({articles: data});
@@ -72,6 +73,7 @@ class Main extends React.Component {
     }, 500)
   }
 
+  //Get all articles from cache
   getDbArticles() {
   
     return new Promise((resolve, reject) => {
@@ -89,6 +91,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get energy articles from cache
   getDbArticlesEnergy() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -105,6 +108,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get pollution articles from cache
   getDbArticlesPollution() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -121,6 +125,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get recycling articles from cache
   getDbArticlesRecycling() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -137,6 +142,7 @@ class Main extends React.Component {
     });
   }
 
+  //Fill cards with articles
   render() {
     
     let articles = this.state.articles;
