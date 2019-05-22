@@ -62,7 +62,7 @@ class CommentPage extends React.Component {
 
                                 {/* This page makes use of the Facebook Comments API. */}
                                 <FacebookProvider appId="281178766160238">
-                                    <Comments />
+                                    <Comments href={"https://vancouvereconews.azurewebsites.net/" + this.state.news.url} />
                                 </FacebookProvider>
                             </div>
                         </div>
