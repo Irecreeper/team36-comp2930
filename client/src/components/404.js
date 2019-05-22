@@ -1,6 +1,7 @@
 /* 
 The 404 page.
 Appears when you head to a page that doesn't exist.
+Has some basic instructions about what to do should you arrive here, and a button to head back to the landing page.
 */
 
 import React from 'react'
@@ -19,9 +20,9 @@ class Contact extends React.Component {
     return (
       <div>
         <NavBar />
-        <div class="contain">
-          <h1 class="text-center text-on-background-lg font-el">404: Page Not Found</h1>
-          <div id="main-content" class="container">
+        <div className="contain">
+          <h1 className="text-center text-on-background-lg font-el">404: Page Not Found</h1>
+          <div id="main-content" className="container">
             <p>
               The URL you tried to access did not exist on our servers. Perhaps you followed 
               a faulty link, misinput the URL, or the page no longer exists due to a change 
