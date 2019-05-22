@@ -34,10 +34,10 @@ class About extends React.Component {
     return (
       <div>
         <NavBar />
-        <div class="contain">
-        <div id="main-content" class="container">
+        <div className="contain">
+        <div id="main-content" className="container">
           {/* About Company */}
-          <h1 class="font-el2">What is VEN?</h1>
+          <h1 className="font-el2">What is VEN?</h1>
           <p>
             VEN, short for <i>Vancouver Eco News</i>, is a Vancouver-based news
             aggregator that collects articles on the environment from our
@@ -55,7 +55,7 @@ class About extends React.Component {
             was sponsored by the folks at EcoCity.
           </p>
 
-          <h1 class="font-el2">Our Mission</h1>
+          <h1 className="font-el2">Our Mission</h1>
           <p>
             Vancouver Eco News was created so that Vancouverites (and others
             around the world) could easily keep up with all of the eco-based
@@ -90,11 +90,11 @@ class About extends React.Component {
           </p>
 
           {/* About Staff */}
-          <h1 class="font-el2">The People of VEN</h1>
+          <h1 className="font-el2">The People of VEN</h1>
           <p>Here is a brief overview of those who worked on VEN.</p>
-          <div class="row">
-            <div class="col-md-4 about_person">
-              <h2 class="font-el text-center">Manuel</h2>
+          <div className="row">
+            <div className="col-md-4 about_person">
+              <h2 className="font-el text-center">Manuel</h2>
               <Image
                 src={Manuel}
                 className="Mug_Image"
@@ -108,8 +108,8 @@ class About extends React.Component {
                 and anime, and also enjoys combat sports and exercise.
               </p>
             </div>
-            <div class="col-md-4 about_person">
-              <h2 class="font-el text-center">Joel</h2>
+            <div className="col-md-4 about_person">
+              <h2 className="font-el text-center">Joel</h2>
               <Image
                 src={Joel}
                 className="Mug_Image"
@@ -123,8 +123,8 @@ class About extends React.Component {
                 programmers. He’s a fan of gaming, especially platformer games.
               </p>
             </div>
-            <div class="col-md-4 about_person">
-              <h2 class="font-el text-center">Paolo</h2>
+            <div className="col-md-4 about_person">
+              <h2 className="font-el text-center">Paolo</h2>
               <Image
                 src={Paolo}
                 className="Mug_Image"
@@ -139,8 +139,8 @@ class About extends React.Component {
                 than happy to study at BCIT.
               </p>
             </div>
-            <div class="col-md-4 about_person">
-              <h2 class="font-el text-center">Alec</h2>
+            <div className="col-md-4 about_person">
+              <h2 className="font-el text-center">Alec</h2>
               <Image
                 src={Alec}
                 className="Mug_Image"
@@ -155,8 +155,8 @@ class About extends React.Component {
                 or play video games like DotA.
               </p>
             </div>
-            <div class="col-md-4 about_person">
-              <h2 class="font-el text-center">Zachary</h2>
+            <div className="col-md-4 about_person">
+              <h2 className="font-el text-center">Zachary</h2>
               <Image
                 src={Zach}
                 className="Mug_Image"

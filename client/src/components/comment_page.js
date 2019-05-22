@@ -43,7 +43,7 @@ class CommentPage extends React.Component {
                             {/* Card Image */}
                             <a href={this.state.news.url} target="_blank"> {/* Clicking on the image will take you to the article address. */}
                                 <img 
-                                    class="card-img-top"
+                                    className="card-img-top"
                                     src={this.state.news.image}
                                     ref={img => this.img = img} 
                                     onError={() => this.img.src = VENLogo}

@@ -24,7 +24,7 @@ class View_art_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-primary font_ro"
+          className="btn btn-primary font_ro"
           onClick={this.go}
         >
           View articles
