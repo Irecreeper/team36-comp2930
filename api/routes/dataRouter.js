@@ -1,8 +1,8 @@
-/* 
+/*
 Handles GET requests for the server.
 Makes heavy use of DbAccess.js.
 */
-const express = require('express');
+const express = require('express')
 
 //const DataManager = require('../dataManager');
 //const dataManager = new DataManager();
@@ -56,9 +56,4 @@ router
         })
 })
 
-
-
-
-
-
-module.exports = router;
+module.exports = router

@@ -58,7 +58,7 @@ getArticles() {
     return (
             <div
               id={'articlecard-' + this.nextUniqueId()}
-              className="col-lg-4"
+              className="col-lg-4 hideBar"
             >
               {/* The whole card tilts when you hover over it! */}
               <Tilt className="Tilt" options={{ max: 10, scale: 1.04 }}>

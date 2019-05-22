@@ -34,6 +34,7 @@ class NavBar extends React.Component {
           <Nav className="mx-auto float-right float-md-none">
             <Cat1_but className="nav_option" />
             <Cat2_but className="nav_option" />
+            <Cat3_but className="nav_option" />
           </Nav>
         </Navbar.Collapse>
         {/* The logo! Note that the order-# tags move it around based on screen size. */}
@@ -42,6 +43,7 @@ class NavBar extends React.Component {
         </a>
         <Navbar.Collapse id="basic-navbar-nav" className="order-4 order-md-3">  {/* Last two nav options. */}
           <Nav className="mx-auto float-right float-md-none">
+            <Cat4_but className="nav_option" />
             <About_us_but className="nav_option" />
             <Contact_but className="nav_option" />
           </Nav>

@@ -1,10 +1,11 @@
-/* 
+/*
 Provides a connection to MongoDB.
 */
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/test?retryWrites=true"; //The address of our database!
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const MongoClient = require('mongodb').MongoClient
+const uri =
+  'mongodb+srv://Viencimo:bbbbusdriver@cluster01-9s7ry.mongodb.net/test?retryWrites=true' //The address of our database!
+const client = new MongoClient(uri, { useNewUrlParser: true })
 
 /*
     Provides methods to open and close the connection the specified collection and
@@ -38,6 +39,7 @@ class MongoConnection {
                 .catch(error => console.log(error));
         }
     }
+  }
 }
 
-module.exports = MongoConnection;
+module.exports = MongoConnection
