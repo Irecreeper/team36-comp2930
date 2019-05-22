@@ -25,6 +25,7 @@ const style = {
 }
 
 class Main extends React.Component {
+  
   state = {
     items: Array.from({ length: 2 }),
     hasMore: true
@@ -76,7 +77,7 @@ class Main extends React.Component {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
       axios
-        .get('http://localhost:9000/api')
+        .get('https://vaneconews.azurewebsites.net/api/')
         .then(response => {
           resolve(response.data);
           return;
@@ -137,6 +138,7 @@ class Main extends React.Component {
   }
 
   render() {
+    
     let articles = this.state.articles;
     var articleCount = this.state.articleCount;
     return (

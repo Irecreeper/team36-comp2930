@@ -5,7 +5,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "api": "cd api && npm start",
-    "start": "concurrently \"npm run client\" \"npm run api\" "
+    "start": "cd client && npm install && npm run build && cd.. && npm run api "
   },
   "devDependencies": {
     "concurrently": "^1.0.0"

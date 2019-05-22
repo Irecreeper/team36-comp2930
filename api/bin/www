@@ -10,6 +10,8 @@ This does a variety of things related to starting the server.
 /**
  * Module dependencies.
  */
+console.log('123')
+
 
 var app = require('../app')
 var debug = require('debug')('api:server')
