@@ -23,7 +23,7 @@ class About_us_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-success font_ro"
+          className="btn btn-success font_ro"
           onClick={this.go}
         >
           Return to Landing

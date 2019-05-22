@@ -30,7 +30,7 @@ class comments_but extends Component {
         <button
           id="view_button"
           type="button"
-          class="btn btn-primary"
+          className="btn btn-primary"
           onClick={this.go}
         >
           Read Comments

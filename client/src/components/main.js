@@ -25,6 +25,7 @@ const style = {
 }
 
 class Main extends React.Component {
+  
   state = {
     items: Array.from({ length: 2 }),
     hasMore: true
@@ -67,6 +68,7 @@ class Main extends React.Component {
     this.fetchMoreData();
   }
 
+  //
   componentDidMount() {
     this.getDbArticles().then(data => {
       this.setState({articlesAll: data});
@@ -115,12 +117,13 @@ class Main extends React.Component {
     }, 500)
   }
 
+  //Get all articles from cache
   getDbArticles() {
   
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
       axios
-        .get('http://localhost:9000/api')
+      .get('http://localhost:9000/api/')
         .then(response => {
           resolve(response.data);
           return;
@@ -132,6 +135,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get energy articles from cache
   getDbArticlesEnergy() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -148,6 +152,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get pollution articles from cache
   getDbArticlesPollution() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -164,6 +169,7 @@ class Main extends React.Component {
     });
   }
 
+  //Get recycling articles from cache
   getDbArticlesRecycling() {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
@@ -180,7 +186,9 @@ class Main extends React.Component {
     });
   }
 
+  //Fill cards with articles
   render() {
+    
     let articles = this.state.articles;
     var articleCount = this.state.articleCount;
     return (
