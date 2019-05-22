@@ -77,7 +77,7 @@ class Main extends React.Component {
     return new Promise((resolve, reject) => {
       console.log("Running getDbArticles");
       axios
-        .get('https://vaneconews.azurewebsites.net/api/')
+        .get('http://localhost:9000/api/')
         .then(response => {
           resolve(response.data);
           return;
