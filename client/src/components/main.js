@@ -77,8 +77,14 @@ class Main extends React.Component {
       console.log("Number of unsorted articles: " + this.state.articleCountAll);
     })
     .then(() => {
-      this.setState({articles: this.state.articlesAll});
-      this.setState({articleCount: this.state.articleCountAll});
+      if (this.props.location.default == 'energy') {
+        this.switchToEnergy();
+      } else if (this.props.location.default == 'pollution') {
+        this.switchToPollution();
+      } else if (this.props.location.default == 'recycling') {
+        this.switchToRecycling();
+      } else this.switchToAll();
+      
     })
 
     this.getDbArticlesEnergy().then(data => {

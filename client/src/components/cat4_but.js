@@ -16,7 +16,11 @@ class Cat4_but extends Component {
 
   //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
-    this.props.callback4();
+    if(this.props.callback4)
+      this.props.callback4();
+      else this.props.history.push({
+        pathname: '/main'
+      })
   }
 
   render() {
