@@ -91,17 +91,7 @@ class Main extends React.Component {
       console.log(this.state.articlesAll);
       console.log("Number of unsorted articles: " + this.state.articleCountAll);
     })
-      .then(() => {
-
-        if (this.props.location.default == 'energy') {
-          this.switchToEnergy();
-        } else if (this.props.location.default == 'pollution') {
-          this.switchToPollution();
-        } else if (this.props.location.default == 'recycling') {
-          this.switchToRecycling();
-        } else this.switchToAll();
-
-      })
+      
 
     this.getDbArticlesEnergy().then(data => {
 
@@ -135,6 +125,17 @@ class Main extends React.Component {
       console.log(this.state.articlesRecycling);
       console.log("Number of recycling articles: " + this.state.articleCountRecycling);
     })
+    .then(() => {
+
+        if (this.props.location.default == 'energy') {
+          this.switchToEnergy();
+        } else if (this.props.location.default == 'pollution') {
+          this.switchToPollution();
+        } else if (this.props.location.default == 'recycling') {
+          this.switchToRecycling();
+        } else this.switchToAll();
+
+      })
   }
 
   fetchMoreData = () => {
