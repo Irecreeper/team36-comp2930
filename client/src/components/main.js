@@ -91,7 +91,14 @@ class Main extends React.Component {
       console.log(this.state.articlesAll);
       console.log("Number of unsorted articles: " + this.state.articleCountAll);
     })
-      
+      .then(() => {
+
+        if (!this.props.location.default) {
+          this.switchToAll();
+        }
+
+      })
+
 
     this.getDbArticlesEnergy().then(data => {
 
@@ -103,6 +110,13 @@ class Main extends React.Component {
       console.log(this.state.articlesEnergy);
       console.log("Number of energy articles: " + this.state.articleCountEnergy);
     })
+      .then(() => {
+
+        if (this.props.location.default == 'energy') {
+          this.switchToEnergy();
+        }
+
+      })
 
     this.getDbArticlesPollution().then(data => {
 
@@ -113,6 +127,12 @@ class Main extends React.Component {
         this.setState({ articleCountPollution: this.state.articlesPollution.length });
       console.log(this.state.articlesPollution);
       console.log("Number of pollution articles: " + this.state.articleCountPollution)
+    }).then(() => {
+
+      if (this.props.location.default == 'pollution') {
+        this.switchToPollution();
+      }
+
     })
 
     this.getDbArticlesRecycling().then(data => {
@@ -125,15 +145,11 @@ class Main extends React.Component {
       console.log(this.state.articlesRecycling);
       console.log("Number of recycling articles: " + this.state.articleCountRecycling);
     })
-    .then(() => {
+      .then(() => {
 
         if (this.props.location.default == 'energy') {
-          this.switchToEnergy();
-        } else if (this.props.location.default == 'pollution') {
-          this.switchToPollution();
-        } else if (this.props.location.default == 'recycling') {
           this.switchToRecycling();
-        } else this.switchToAll();
+        }
 
       })
   }
