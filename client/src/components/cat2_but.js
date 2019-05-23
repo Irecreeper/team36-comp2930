@@ -16,7 +16,12 @@ class Cat2_but extends Component {
 
   //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
-    this.props.callback2();
+    if(this.props.callback2)
+      this.props.callback2();
+      else this.props.history.push({
+        pathname: '/main',
+        default: 'pollution'
+      })
   }
 
   render() {

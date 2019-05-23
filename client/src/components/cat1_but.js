@@ -16,7 +16,13 @@ class Cat1_but extends Component {
   
   //REMEMBER: There must be a proper "route" established in App.js's <Switch> area!
   go() {
-    this.props.callback();
+    
+    if(this.props.callback)
+      this.props.callback();
+      else this.props.history.push({
+        pathname: '/main',
+        default: 'energy'
+      })
   }
 
   render() {
