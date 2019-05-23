@@ -79,6 +79,7 @@ class Main extends React.Component {
 
     this.mounted = true;
     console.log("mounted");
+    console.log(this.props.location.default)
 
 
     this.getDbArticles().then(data => {
@@ -147,7 +148,7 @@ class Main extends React.Component {
     })
       .then(() => {
 
-        if (this.props.location.default == 'energy') {
+        if (this.props.location.default == 'recycling') {
           this.switchToRecycling();
         }
 
